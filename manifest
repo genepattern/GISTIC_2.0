@@ -1,5 +1,5 @@
 #Thu Apr 03 12:50:29 EDT 2008
-commandLine=gp_gistic_core -sgfl <segmentation.file> -snpfile <snp.file> -refgene <reference.gene.file> -alf <array.list.file> -of <output.file.name> -ta <amplification.threshold>  -td <deletion.threshold> -qv <q.value.threshold> -b . 
+commandLine=gp_gistic -sgfl <segmentation.file> -snpfile <snp.file> -refgene <reference.gene.file> -alf <array.list.file> -of <output.file.name> -ta <amplification.threshold>  -td <deletion.threshold> -qv <q.value.threshold> -b . 
 cpuType=any
 description=Calculates G scores, performs permutation testing, and identifies significantly altered regions by peel-off
 fileFormat=
