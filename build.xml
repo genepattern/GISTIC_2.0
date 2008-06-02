@@ -5,8 +5,7 @@
 	<target name="create-zip" depends="init">
 		<antcall target="prezip" />
 		<zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
-			<fileset dir="." includes="manifest, *.pdf" />
-			<fileset dir="linux-64" includes="*" />
+			<fileset dir="." includes="*" excludes="*.doc" />
 		</zip>
 		<antcall target="postzip" />
 	</target>
