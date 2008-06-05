@@ -1,2 +1,0 @@
-% Optimization Toolbox Library
-%
