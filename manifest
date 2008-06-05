@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:0.1
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> -b . -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -lcap Inf -ucap Inf -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -fa 0
+commandLine=<libdir>gistic_script <libdir> <MATLAB.library.path> -b . -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -lcap Inf -ucap Inf -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -fa 0
 cpuType=x86
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=
