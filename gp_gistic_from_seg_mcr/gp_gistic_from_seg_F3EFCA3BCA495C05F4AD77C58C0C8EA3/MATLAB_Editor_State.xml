@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Editor version="1.0">
+   <File absPath="/home/radon01/jdobson/GISTIC_genepattern" lastWrittenTime="1207247175596" name="dataformat.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/MyMatlab/Tools" lastWrittenTime="1207249931226" name="one-liners.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1207578893705" name="read_cbs_file.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Glioma/GISTICtest" lastWrittenTime="1207578893865" name="testscript.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/gp_modules" lastWrittenTime="1207578893964" name="gp_gistic.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Glioma" lastWrittenTime="1207841854874" name="cytototxt.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/POS" lastWrittenTime="1208188422882" name="datastruct2struct.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/Documentation" lastWrittenTime="1208200994145" name="gistic_inputs.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/MyMatlab/SNR" lastWrittenTime="1208276468851" name="SNRplotgui.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/gistic/GCM/preprocessing_final_080404" lastWrittenTime="1208355020724" name="fixsegmentpositions.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1208355020771" name="order_by_pos.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/gistic/Medulloblastoma" lastWrittenTime="1208465648064" name="gistic_script.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/gistic/Medulloblastoma/SNP6.0_20080417" lastWrittenTime="1208896253165" name="gistic080417.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/gistic/Medulloblastoma/SNP6.0_20080417" lastWrittenTime="1209058026526" name="gistic080423b.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/gistic/GCM/preprocessing_final_080404" lastWrittenTime="1209678927941" name="gladparams080425.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209678928026" name="find_duplicate_samples.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209678928052" name="run_gistic_from_seg_lite.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209678928078" name="run_gistic_lite.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Barbara" lastWrittenTime="1209678928104" name="LOH_gistic.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209678928163" name="add_polysomy_by_reg.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209678928186" name="add_D_peakcalls.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209994433601" name="run_glad_batch_hdf5.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209994434109" name="run_glad_hdf5.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209994434215" name="run_cbs_hdf5.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1209994805831" name="run_cbs_batch_hdf5.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1210271875952" name="smooth_cbs.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1210358729905" name="gistic_plots.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1210358729956" name="quadprog.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1210358730001" name="plot_snp_score.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1210358730064" name="draw_spaced_text.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1210358730091" name="find_text_pos.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1210358730300" name="check_if_has_header.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Glioma" lastWrittenTime="1210614413974" name="testscript.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/gp_modules" lastWrittenTime="1210708799688" name="handle_args.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1210708799819" name="remove_cnv.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1211578667223" name="histogram_qc.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Glioma" lastWrittenTime="1212423166097" name="preproctest.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212423166236" name="gistic_preprocessing.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/gp_modules" lastWrittenTime="1212495728047" name="gp_gistic_preprocessing.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836544" name="run_gistic_from_seg.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/xchip/cancergenome/data/Jen/Glioma" lastWrittenTime="1212500836564" name="gp_gistic_from_seg_test.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836581" name="make_D_from_seg.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1212500836608" name="read_table.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836639" name="snp_score_permutations.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/gp_modules" lastWrittenTime="1212500836669" name="gp_gistic_from_seg.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836696" name="make_all_lesions_file.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836721" name="run_gistic.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836738" name="genetables.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/snp" lastWrittenTime="1212500836774" name="generate_regs_by_peel_off.m">
+      <CodeFolds version="1.0"/>
+   </File>
+   <File absPath="/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab" lastWrittenTime="1212604020162" name="startup.m">
+      <CodeFolds version="1.0"/>
+   </File>
+</Editor>
