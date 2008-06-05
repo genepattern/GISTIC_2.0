@@ -1,15 +1,23 @@
 #GISTIC
-#Mon Jun 02 17:31:50 EDT 2008
+#Thu Jun 05 10:03:24 EDT 2008
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:0.1
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> -b . -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -lcap Inf -ucap Inf -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -fa 0
-cpuType=any
+commandLine=<libdir>gistic_script <libdir> -b . -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -lcap Inf -ucap Inf -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -fa 0
+cpuType=x86
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=
 language=MATLAB
 name=GISTIC
-os=any
+os=linux
+privacy=public
+quality=production
+requiredPatchLSIDs=
+requiredPatchURLs=
+taskType=SNP Analysis
+userid=GenePattern
+version=
+
 p10_MODE=IN
 p10_TYPE=FILE
 p10_default_value=
@@ -30,13 +38,13 @@ p11_optional=on
 p11_prefix_when_specified=
 p11_type=java.io.File
 p11_value=
-p1_default_value=/xchip/tcga/Annotation_Files/UCSC_hg18/hg18_with_miR_20080407.mat
+p1_default_value=hg18_with_miR_20080407.mat
 p1_description=The reference file including cytoband and gene location information.
 p1_name=refgene.file
 p1_optional=
 p1_prefix_when_specified=
 p1_type=java.io.String
-p1_value=/xchip/tcga/Annotation_Files/UCSC_hg18/hg18_with_miR_20080407.mat\=Human Hg18;~gadgetz/projects/snp/data/Refgene/hg17/ucsc_20070131/hg17_20070131.mat\=Human Hg17;~gadgetz/projects/snp/data/Refgene/hg16/ucsc_20070112/hg16_20070112.mat\=Human Hg16
+p1_value=hg18_with_miR_20080407.mat\=Human Hg18;hg17_20070131.mat\=Human Hg17;hg16_20070112.mat\=Human Hg16
 p2_default_value=0.1
 p2_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
 p2_name=amplifications.threshold
@@ -99,12 +107,4 @@ p9_optional=
 p9_prefix_when_specified=
 p9_type=java.io.File
 p9_value=
-pipelineModel=
-privacy=public
-quality=production
-requiredPatchLSIDs=
-requiredPatchURLs=
-serializedModel=
-taskType=SNP Analysis
-userid=mokelly
-version=0.2
+

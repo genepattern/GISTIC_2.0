@@ -8,6 +8,7 @@
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab</Directory>
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/Documentation</Directory>
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/HDF5</Directory>
+    <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/HDF52</Directory>
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/POS</Directory>
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/Startup</Directory>
     <Directory>/home/radon01/jdobson/CancerGenomeAnalysis/trunk/matlab/Tools</Directory>

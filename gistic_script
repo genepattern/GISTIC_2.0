@@ -5,7 +5,7 @@ set PATH=$1;  setenv PATH
 setenv LD_LIBRARY_PATH /broad/tools/apps/matlab75/sys/os/glnxa64:/broad/tools/apps/matlab75/bin/glnxa64:/util/gcc-4.1.1/lib:$LD_LIBRARY_PATH
 
 
-# echo command line: ${argv[2-]}
+#echo command line: ${argv[2-]}
 
 # Pass remaining arguments to gp_gistic_from_seg using ${argv[2-]}
 ${1}gp_gistic_from_seg ${argv[2-]}
