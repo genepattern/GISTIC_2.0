@@ -18,33 +18,14 @@ taskType=SNP Analysis
 userid=GenePattern
 version=
 
-p10_MODE=IN
-p10_TYPE=FILE
-p10_default_value=
-p10_description=The array list file is an optional file identifying the subset of samples to be used in the analysis. It is a one column file with an optional header. The sample identifiers listed in the array list file must match the sample names given in the segmentation file.
-p10_fileFormat=alf
-p10_name=array.list.file
-p10_optional=on
-p10_prefix_when_specified=
-p10_type=java.io.File
-p10_value=
-p11_MODE=IN
-p11_TYPE=FILE
-p11_default_value=
-p11_description=There are two options for the cnv file. The first option allows CNVs to be identified by marker name. The second option allows the CNVs to be identified by genomic location.
-p11_fileFormat=CNV
-p11_name=cnv.file
-p11_optional=on
-p11_prefix_when_specified=
-p11_type=java.io.File
-p11_value=
-p1_default_value=hg18_with_miR_20080407.mat
+p1_default_value=Human Hg16
 p1_description=The reference file including cytoband and gene location information.
 p1_name=refgene.file
 p1_optional=
 p1_prefix_when_specified=
 p1_type=java.io.String
 p1_value=hg18_with_miR_20080407.mat\=Human Hg18;hg17_20070131.mat\=Human Hg17;hg16_20070112.mat\=Human Hg16
+
 p2_default_value=0.1
 p2_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
 p2_name=amplifications.threshold
@@ -52,6 +33,7 @@ p2_optional=
 p2_prefix_when_specified=
 p2_type=java.io.Float
 p2_value=
+
 p3_default_value=0.1
 p3_description=Threshold for copy number deletions. Regions with a log2 ratio below the negative of this value are considered deletions.
 p3_name=deletions.threshold
@@ -59,6 +41,7 @@ p3_optional=
 p3_prefix_when_specified=
 p3_type=java.io.Float
 p3_value=
+
 p4_default_value=4
 p4_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
 p4_name=join.segment.size
@@ -66,6 +49,7 @@ p4_optional=
 p4_prefix_when_specified=
 p4_type=java.io.Integer
 p4_value=
+
 p5_default_value=0.25
 p5_description=Threshholding value for q-values.
 p5_name=qv.thresh
@@ -73,6 +57,7 @@ p5_optional=
 p5_prefix_when_specified=
 p5_type=java.io.Float
 p5_value=
+
 p6_default_value=.gp_gistic
 p6_description=Extension to append to all output files.
 p6_name=extension
@@ -80,6 +65,7 @@ p6_optional=
 p6_prefix_when_specified=
 p6_type=java.io.String
 p6_value=
+
 p7_default_value=1
 p7_description=Flag indicating whether to remove data from the X-chromosome before analysis.
 p7_name=remove.X
@@ -87,6 +73,7 @@ p7_optional=
 p7_prefix_when_specified=
 p7_type=java.lang.String
 p7_value=1\=Yes;0\=No
+
 p8_MODE=IN
 p8_TYPE=FILE
 p8_default_value=
@@ -97,6 +84,7 @@ p8_optional=
 p8_prefix_when_specified=
 p8_type=java.io.File
 p8_value=
+
 p9_MODE=IN
 p9_TYPE=FILE
 p9_default_value=
@@ -108,3 +96,24 @@ p9_prefix_when_specified=
 p9_type=java.io.File
 p9_value=
 
+p10_MODE=IN
+p10_TYPE=FILE
+p10_default_value=
+p10_description=The array list file is an optional file identifying the subset of samples to be used in the analysis. It is a one column file with an optional header. The sample identifiers listed in the array list file must match the sample names given in the segmentation file.
+p10_fileFormat=alf
+p10_name=array.list.file
+p10_optional=on
+p10_prefix_when_specified=
+p10_type=java.io.File
+p10_value=
+
+p11_MODE=IN
+p11_TYPE=FILE
+p11_default_value=
+p11_description=There are two options for the cnv file. The first option allows CNVs to be identified by marker name. The second option allows the CNVs to be identified by genomic location.
+p11_fileFormat=CNV
+p11_name=cnv.file
+p11_optional=on
+p11_prefix_when_specified=
+p11_type=java.io.File
+p11_value=
