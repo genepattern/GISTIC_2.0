@@ -3,10 +3,10 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:3
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> <MATLAB.library.path> -b . -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -lcap Inf -ucap Inf -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -fa 0
+commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <do.gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer
-fileFormat=
+fileFormat=png
 language=MATLAB
 name=GISTIC
 os=linux
@@ -17,99 +17,131 @@ p1_name=refgene.file
 p1_optional=
 p1_prefix_when_specified=
 p1_type=java.io.String
-p1_value=hg18_with_miR_20080407.mat\=Human Hg18;hg17_20070131.mat\=Human Hg17;hg16_20070112.mat\=Human Hg16
+p1_value=hg18_with_miR_20080407.mat\=Human Hg18;.mat\=Human Hg17;hg16.mat\=Human Hg16
 
-p2_default_value=0.1
-p2_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
-p2_name=amplifications.threshold
+p2_MODE=IN
+p2_TYPE=FILE
+p2_default_value=
+p2_description=The segmentation file contains the segmented data for all the samples identified by GLAD, CBS, or some other segmentation algorithm. (See GLAD file format in the Genepattern file formats documentation.) It is a six column, tab-delimited file with an optional first line identifying the columns. Positions are in base pair units.
+p2_fileFormat=seg
+p2_name=seg.file
 p2_optional=
 p2_prefix_when_specified=
-p2_type=java.io.Float
+p2_type=java.io.File
 p2_value=
 
-p3_default_value=0.1
-p3_description=Threshold for copy number deletions. Regions with a log2 ratio below the negative of this value are considered deletions.
-p3_name=deletions.threshold
+p3_MODE=IN
+p3_TYPE=FILE
+p3_default_value=
+p3_description=The markers file identifies the marker names and positions of the markers in the original dataset (before segmentation). It is a three column, tab-delimited file with an optional header. If not already, markers are sorted by genomic position.
+p3_fileFormat=cn
+p3_name=markers.file
 p3_optional=
 p3_prefix_when_specified=
-p3_type=java.io.Float
+p3_type=java.io.File
 p3_value=
 
-p4_default_value=4
-p4_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
-p4_name=join.segment.size
-p4_optional=
+p4_MODE=IN
+p4_TYPE=FILE
+p4_default_value=
+p4_description=The array list file is an optional file identifying the subset of samples to be used in the analysis. It is a one column file with an optional header. The sample identifiers listed in the array list file must match the sample names given in the segmentation file.
+p4_fileFormat=alf;txt
+p4_name=array.list.file
+p4_optional=on
 p4_prefix_when_specified=
-p4_type=java.io.Integer
+p4_type=java.io.File
 p4_value=
 
-p5_default_value=0.25
-p5_description=Threshholding value for q-values.
-p5_name=qv.thresh
-p5_optional=
+p5_MODE=IN
+p5_TYPE=FILE
+p5_default_value=
+p5_description=There are two options for the cnv file. The first option allows CNVs to be identified by marker name. The second option allows the CNVs to be identified by genomic location.
+p5_fileFormat=CNV
+p5_name=cnv.file
+p5_optional=on
 p5_prefix_when_specified=
-p5_type=java.io.Float
+p5_type=java.io.File
 p5_value=
 
-p6_default_value=.gp_gistic
-p6_description=Extension to append to all output files.
-p6_name=extension
+p6_default_value=0.1
+p6_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
+p6_name=amplifications.threshold
 p6_optional=
 p6_prefix_when_specified=
-p6_type=java.io.String
+p6_type=java.io.Float
 p6_value=
 
-p7_default_value=1
-p7_description=Flag indicating whether to remove data from the X-chromosome before analysis.
-p7_name=remove.X
+p7_default_value=0.1
+p7_description=Threshold for copy number deletions. Regions with a log2 ratio below the negative of this value are considered deletions.
+p7_name=deletions.threshold
 p7_optional=
 p7_prefix_when_specified=
-p7_type=java.lang.String
-p7_value=1\=Yes;0\=No
+p7_type=java.io.Float
+p7_value=
 
-p8_MODE=IN
-p8_TYPE=FILE
-p8_default_value=
-p8_description=The segmentation file contains the segmented data for all the samples identified by GLAD, CBS, or some other segmentation algorithm. (See GLAD file format in the Genepattern file formats documentation.) It is a six column, tab-delimited file with an optional first line identifying the columns. Positions are in base pair units.
-p8_fileFormat=seg
-p8_name=seg.file
+p8_default_value=4
+p8_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
+p8_name=join.segment.size
 p8_optional=
 p8_prefix_when_specified=
-p8_type=java.io.File
+p8_type=java.io.Integer
 p8_value=
 
-p9_MODE=IN
-p9_TYPE=FILE
-p9_default_value=
-p9_description=The markers file identifies the marker names and positions of the markers in the original dataset (before segmentation). It is a three column, tab-delimited file with an optional header. If not already, markers are sorted by genomic position.
-p9_fileFormat=CNm
-p9_name=markers.file
+p9_default_value=0.25
+p9_description=Threshholding value for q-values.
+p9_name=qv.thresh
 p9_optional=
 p9_prefix_when_specified=
-p9_type=java.io.File
+p9_type=java.io.Float
 p9_value=
 
-p10_MODE=IN
-p10_TYPE=FILE
-p10_default_value=
-p10_description=The array list file is an optional file identifying the subset of samples to be used in the analysis. It is a one column file with an optional header. The sample identifiers listed in the array list file must match the sample names given in the segmentation file.
-p10_fileFormat=alf
-p10_name=array.list.file
-p10_optional=on
+p10_default_value=.gp_gistic
+p10_description=Extension to append to all output files.
+p10_name=extension
+p10_optional=
 p10_prefix_when_specified=
-p10_type=java.io.File
+p10_type=java.io.String
 p10_value=
 
-p11_MODE=IN
-p11_TYPE=FILE
-p11_default_value=
-p11_description=There are two options for the cnv file. The first option allows CNVs to be identified by marker name. The second option allows the CNVs to be identified by genomic location.
-p11_fileFormat=CNV
-p11_name=cnv.file
-p11_optional=on
+p11_default_value=1
+p11_description=Flag indicating whether to remove data from the X-chromosome before analysis.
+p11_name=remove.X
+p11_optional=
 p11_prefix_when_specified=
-p11_type=java.io.File
-p11_value=
+p11_type=java.lang.String
+p11_value=1\=Yes;0\=No
+
+p12_default_value=0.75
+p12_description=Confidence level used to calculate the region containing a driver.
+p12_name=confidence.level
+p12_optional=
+p12_prefix_when_specified=
+p12_type=java.lang.String
+p12_value=
+
+p13_default_value=0
+p13_description=Flag indicating that the gene GISTIC algorithm should be used to calculate the significance of deletions at a gene level instead of a marker level.
+p13_name=do.gene.gistic
+p13_optional=
+p13_prefix_when_specified=
+p13_type=java.lang.String
+p13_value=1\=Yes;0\=No
+
+p14_default_value=0
+p14_description=Flag indicating whether an additional broad-level analysis should be performed.
+p14_name=run.broad.analysis
+p14_optional=
+p14_prefix_when_specified=
+p14_type=java.lang.String
+p14_value=1\=Yes;0\=No
+
+p15_default_value=0.98
+p15_description=Threshold used to distinguish broad form focal events, given in units of fraction of chromosome arm.
+p15_name=broad.length.cutoff
+p15_optional=
+p15_prefix_when_specified=
+p15_type=java.lang.String
+p15_value=
 
 pipelineModel=
 privacy=public
