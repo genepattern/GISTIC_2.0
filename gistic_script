@@ -2,10 +2,12 @@
 
 set PATH=$1;  setenv PATH
 
-setenv LD_LIBRARY_PATH ${2}
+setenv LD_LIBRARY_PATH ${2}:$LD_LIBRARY_PATH
+
+setenv XAPPLRESDIR ${3} 
 
 #echo command line: ${argv}
 
-# Pass remaining arguments to gp_gistic_from_seg using ${argv[3-]}
-${1}gp_gistic_from_seg ${argv[3-]}
+# Pass remaining arguments to gp_gistic2_from_seg using ${argv[4-]}
+${1}gp_gistic2_from_seg ${argv[4-]}
 
