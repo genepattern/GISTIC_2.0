@@ -7,6 +7,7 @@
 		<zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
             <zipfileset dir="." filemode="755" includes="gistic_script, gp_gistic2_from_seg"/>			
             <fileset dir="." includes="*" excludes="*.doc, gistic_script" />
+            <fileset dir="refgene_files" includes="*.mat" />            
 		</zip>
 		<antcall target="postzip" />
 	</target>
