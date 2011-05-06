@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:3
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <do.gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1
+commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -ext <extension> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <do.gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -maxseg <max.sample.segs> -arb <do.abitration> -peak_type <peak.types> -res <resolution> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -v 1
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=png
@@ -109,7 +109,7 @@ p11_name=remove.X
 p11_optional=
 p11_prefix_when_specified=
 p11_type=java.lang.String
-p11_value=1\=Yes;0\=No
+p11_value=1\=yes;0\=no
 
 p12_default_value=0.75
 p12_description=Confidence level used to calculate the region containing a driver.
@@ -125,7 +125,7 @@ p13_name=do.gene.gistic
 p13_optional=
 p13_prefix_when_specified=
 p13_type=java.lang.String
-p13_value=1\=Yes;0\=No
+p13_value=1\=yes;0\=no
 
 p14_default_value=0
 p14_description=Flag indicating whether an additional broad-level analysis should be performed.
@@ -133,7 +133,7 @@ p14_name=run.broad.analysis
 p14_optional=
 p14_prefix_when_specified=
 p14_type=java.lang.String
-p14_value=1\=Yes;0\=No
+p14_value=1\=yes;0\=no
 
 p15_default_value=0.98
 p15_description=Threshold used to distinguish broad form focal events, given in units of fraction of chromosome arm.
@@ -143,6 +143,39 @@ p15_prefix_when_specified=
 p15_type=java.lang.String
 p15_value=
 
+p16_default_value=2500
+p16_description=Maximum number of segments allowed for a sample in the input data. Samples with more segments than this threshold are excluded from the analysis.
+p16_name=max.sample.segs
+p16_optional=
+p16_prefix_when_specified=
+p16_type=java.lang.String
+p16_value=
+
+p17_default_value=0.05
+p17_description=Maximum number of segments allowed for a sample in the input data. Samples with more segments than this threshold are excluded from the analysis.
+p17_name=resolution
+p17_optional=
+p17_prefix_when_specified=
+p17_type=java.lang.String
+p17_value=
+
+p18_default_value=1
+p18_description=Flag for using the arbitrated peel-off algorithm when resolving the significance of overlapping peaks.
+p18_name=do.abitration
+p18_optional=
+p18_prefix_when_specified=
+p18_type=java.lang.String
+p18_value=
+
+p19_default_value=robust
+p19_description=Method for evaluating the significance of peaks, either robust or leave-one-out.
+p19_name=peak.types
+p19_optional=
+p19_prefix_when_specified=
+p19_type=java.lang.String
+p19_value=robust;loo\=leave-one-out
+
+
 pipelineModel=
 privacy=public
 quality=production
@@ -151,4 +184,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Bug fix for loading segmentation files with segments of length 1 or non-unique segments
+version=Updated to GISTIC 2.0
