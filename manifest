@@ -159,4 +159,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Removed gene gistic, do arbitration and peak types parameters and modified the command line
+version=Resolved error about missing ts.gp_gistic.mat file, made improvements to q-value plots, and changed where extension is placed in file names
