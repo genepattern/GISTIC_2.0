@@ -17,7 +17,7 @@ p1_name=refgene.file
 p1_optional=
 p1_prefix_when_specified=
 p1_type=java.io.String
-p1_value=hg19.mat\=Human Hg19;hg18_with_miR_20080407.mat\=Human Hg18;.mat\=Human Hg17;hg16.mat\=Human Hg16
+p1_value=hg19.mat\=Human Hg19;hg18_with_miR_20080407.mat\=Human Hg18;hg17.mat\=Human Hg17;hg16.mat\=Human Hg16
 
 p2_MODE=IN
 p2_TYPE=FILE
