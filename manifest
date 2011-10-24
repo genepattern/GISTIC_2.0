@@ -160,4 +160,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Added output prefix parameter and fixed bug related to specifying a broad length cutoff and a cnv file 
+version=Updated to version 2.0.12 which includes a fix to make scores.gistic match the del_qplot figure when you run with genegistic=1 and also additional output to report the parameters and to the CNV file for better forensics
