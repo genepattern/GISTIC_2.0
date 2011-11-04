@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:3
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic 1 -broad <run.broad.analysis> -brlen <broad.length.cutoff> -maxseg <max.sample.segs> -arb 1 -peak_type robust -res <resolution> -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0
+commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -maxseg <max.sample.segs> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=png;v2.pdf;gistic.txt;seg.txt
@@ -63,86 +63,85 @@ p5_prefix_when_specified=
 p5_type=java.io.File
 p5_value=
 
-p6_default_value=0.1
+p6_default_value=yes
 p6_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
-p6_name=amplifications.threshold
+p6_name=gene.gistic
 p6_optional=
 p6_prefix_when_specified=
 p6_type=java.io.Float
-p6_value=
+p6_value=1\=yes;0\=no
 
 p7_default_value=0.1
-p7_description=Threshold for copy number deletions. Regions with a log2 ratio below the negative of this value are considered deletions.
-p7_name=deletions.threshold
+p7_description=Threshold for copy number amplifications. Regions with a log2 ratio above this value are considered amplified.
+p7_name=amplifications.threshold
 p7_optional=
 p7_prefix_when_specified=
 p7_type=java.io.Float
 p7_value=
 
-p8_default_value=4
-p8_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
-p8_name=join.segment.size
+p8_default_value=0.1
+p8_description=Threshold for copy number deletions. Regions with a log2 ratio below the negative of this value are considered deletions.
+p8_name=deletions.threshold
 p8_optional=
 p8_prefix_when_specified=
-p8_type=java.io.Integer
+p8_type=java.io.Float
 p8_value=
 
-p9_default_value=0.25
-p9_description=Threshholding value for q-values.
-p9_name=qv.thresh
+p9_default_value=4
+p9_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
+p9_name=join.segment.size
 p9_optional=
 p9_prefix_when_specified=
-p9_type=java.io.Float
+p9_type=java.io.Integer
 p9_value=
 
-p10_default_value=1
-p10_description=Flag indicating whether to remove data from the X-chromosome before analysis.
-p10_name=remove.X
+p10_default_value=0.25
+p10_description=Threshholding value for q-values.
+p10_name=qv.thresh
 p10_optional=
 p10_prefix_when_specified=
-p10_type=java.lang.String
-p10_value=1\=yes;0\=no
+p10_type=java.io.Float
+p10_value=
 
-p11_default_value=0.75
-p11_description=Confidence level used to calculate the region containing a driver.
-p11_name=confidence.level
+p11_default_value=1
+p11_description=Flag indicating whether to remove data from the X-chromosome before analysis.
+p11_name=remove.X
 p11_optional=
 p11_prefix_when_specified=
 p11_type=java.lang.String
-p11_value=
+p11_value=1\=yes;0\=no
 
-p12_default_value=0
-p12_description=Flag indicating whether an additional broad-level analysis should be performed.
-p12_name=run.broad.analysis
+p12_default_value=0.75
+p12_description=Confidence level used to calculate the region containing a driver.
+p12_name=confidence.level
 p12_optional=
 p12_prefix_when_specified=
 p12_type=java.lang.String
-p12_value=1\=yes;0\=no
+p12_value=
 
-p13_default_value=0.98
-p13_description=Threshold used to distinguish broad form focal events, given in units of fraction of chromosome arm.
-p13_name=broad.length.cutoff
+p13_default_value=0
+p13_description=Flag indicating whether an additional broad-level analysis should be performed.
+p13_name=run.broad.analysis
 p13_optional=
 p13_prefix_when_specified=
 p13_type=java.lang.String
-p13_value=
+p13_value=1\=yes;0\=no
 
-p14_default_value=2500
-p14_description=Maximum number of segments allowed for a sample in the input data. Samples with more segments than this threshold are excluded from the analysis.
-p14_name=max.sample.segs
+p14_default_value=0.98
+p14_description=Threshold used to distinguish broad form focal events, given in units of fraction of chromosome arm.
+p14_name=broad.length.cutoff
 p14_optional=
 p14_prefix_when_specified=
 p14_type=java.lang.String
 p14_value=
 
-p15_default_value=0.05
+p15_default_value=2500
 p15_description=Maximum number of segments allowed for a sample in the input data. Samples with more segments than this threshold are excluded from the analysis.
-p15_name=resolution
+p15_name=max.sample.segs
 p15_optional=
 p15_prefix_when_specified=
 p15_type=java.lang.String
 p15_value=
-
 
 p16_default_value=<seg.file_basename>
 p16_description=The prefix for the output file name
@@ -160,4 +159,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Updated to version 2.0.12 which includes a fix to make scores.gistic match the del_qplot figure when you run with genegistic=1 and also additional output to report the parameters and to the CNV file for better forensics
+version=Added gene gistic as a parameter and removed the resolution parameter
