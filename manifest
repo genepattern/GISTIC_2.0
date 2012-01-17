@@ -144,9 +144,9 @@ p15_type=java.lang.String
 p15_value=
 
 p16_default_value=0
-p16_description=Whether perform arm level peel off. This helps separate peaks which cleans up noise.
+p16_description=Whether to perform arm level peel off. This helps separate peaks which cleans up noise.
 p16_name=arm.peel
-p16_optional=yes
+p16_optional=
 p16_prefix_when_specified=
 p16_type=java.lang.String
 p16_value=1\=yes;0\=no
