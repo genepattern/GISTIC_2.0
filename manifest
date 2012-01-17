@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:3
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -maxseg <max.sample.segs> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0
+commandLine=<libdir>gistic_script <libdir> <MATLAB_LIBRARY> <APPLERES_DIR> -b . -seg <seg.file> -mk <markers.file> -alf <array.list.file> -cnv <cnv.file> -refgene <libdir><refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <qv.thresh> -rx <remove.X> -cap Inf -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <broad.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=png;v2.pdf;gistic.txt;seg.txt
@@ -143,13 +143,21 @@ p15_prefix_when_specified=
 p15_type=java.lang.String
 p15_value=
 
-p16_default_value=<seg.file_basename>
-p16_description=The prefix for the output file name
-p16_name=output.prefix
-p16_optional=
+p16_default_value=0
+p16_description=Whether perform arm level peel off. This helps separate peaks which cleans up noise.
+p16_name=arm.peel
+p16_optional=yes
 p16_prefix_when_specified=
 p16_type=java.lang.String
-p16_value=
+p16_value=1\=yes;0\=no
+
+p17_default_value=<seg.file_basename>
+p17_description=The prefix for the output file name
+p17_name=output.prefix
+p17_optional=
+p17_prefix_when_specified=
+p17_type=java.lang.String
+p17_value=
 
 pipelineModel=
 privacy=public
@@ -159,4 +167,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Added gene gistic as a parameter and removed the resolution parameter
+version=Updated to GISTIC version 2.0.14 and added arm peel as a parameter
