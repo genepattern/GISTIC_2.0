@@ -88,7 +88,7 @@ p8_type=java.io.Float
 p8_value=
 
 p9_default_value=4
-p9_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.
+p9_description=Smallest number of markers to allow in segments from the segmented data. Segments that contain a number of markers less than or equal to this number are joined to the neighboring segment that is closest in copy number.
 p9_name=join.segment.size
 p9_optional=
 p9_prefix_when_specified=
