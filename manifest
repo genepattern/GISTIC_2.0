@@ -167,4 +167,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=Updated to GISTIC version 2.0.14 and added arm peel as a parameter
+version=Updated to GISTIC version 2.0.16 and updated the hg19 refgene file
