@@ -11,7 +11,7 @@ language=MATLAB
 name=GISTIC_2.0
 os=linux
 
-p1_default_value=Human Hg16
+p1_default_value=Human Hg19
 p1_description=The reference file including cytoband and gene location information.
 p1_name=refgene.file
 p1_optional=
