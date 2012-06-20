@@ -8,7 +8,7 @@ cpuType=any
 description=Genomic Identification of Significant Targets in Cancer
 fileFormat=png;v2.pdf;gistic.txt;seg.txt
 language=MATLAB
-name=GISTIC
+name=GISTIC_2.0
 os=linux
 
 p1_default_value=Human Hg16
@@ -167,4 +167,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=GISTIC version 2.0.16 with fix for bad seg file error message not going to stderr
+version=GISTIC version 2.0
