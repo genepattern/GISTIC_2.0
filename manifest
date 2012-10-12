@@ -167,4 +167,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=SNP Analysis
 userid=GenePattern
-version=GISTIC version 2.0.16
+version=Added description of the all_thresholded.by_genes.txt output file to the documentation
