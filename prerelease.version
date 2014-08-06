@@ -1,3 +1,5 @@
+#updated after building 6.5
+#Wed, 06 Aug 2014 12:59:23 -0400
 #updated after building 6.4
 #Wed, 30 Jul 2014 14:11:22 -0400
 #updated after building 6.3
@@ -12,4 +14,4 @@
 #Wed, 20 Jun 2012 10:27:05 -0400
 #updated after building 4.12
 #Mon Jun 18 14:14:56 EDT 2012
-prerelease.number=5
+prerelease.number=6
