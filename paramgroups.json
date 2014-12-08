@@ -1,0 +1,7 @@
+[
+    {name: "Basic Parameters", parameters: ["bowtie.index","GTF.file", "transcriptome.index",  "reads.pair.1", "reads.pair.2", "library.type", "mate.inner.dist", "mate.std.dev", "quality.value.scale", "output.prefix"]},
+    {name: "Parameters Relevant when Transcriptome Search is Activated", description:"These parameters only apply when either the GTF file or transcriptome index parameter is set.", parameters: ["transcriptome.only", "max.transcriptome.hits", "prefilter.multihits"]},
+    {name: "Advanced Parameters with Values Tuned to Mammalian Genomes", parameters: ["read.mismatches", "read.gap.length", "read.edit.dist", "min.anchor.length", "max.splice.mismatches", "min.intron.length", "max.intron.length", "max.insertion.length", "max.deletion.length", "max.multihits"], hidden:true},
+    {name: "Fusion Mapping Parameters", description: "Parameters to enable aligning reads to potential fusion transcripts", parameters: ["fusion.mapping", "fusion.anchor.length", "fusion.read.mismatches"], hidden: true},
+    {name: "Miscellaneous Advanced Parameters", parameters: ["raw.junctions.file", "find.novel.junctions", "coverage.search", "microexon.search", "Bowtie.preset.options", "additional.tophat.options"], hidden: true}
+]
