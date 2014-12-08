@@ -262,4 +262,4 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Added Advanced Param sections, renamed broad.length.cutoff to focal.length.cutoff, updated defaults: focal.length.cutoff=.50, confidence.level=.90, gene.collapse.method="extreme"
+version=Added Advanced Param sections, renamed broad.length.cutoff to focal.length.cutoff, updated defaults: focal.length.cutoff .50, confidence.level .90, gene.collapse.method extreme
