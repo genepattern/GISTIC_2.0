@@ -1,3 +1,4 @@
+#Tue, 09 Dec 2014 12:48:37 -0500
 #GISTIC
 #Wed July 30 2014
 JVMLevel=
@@ -196,7 +197,7 @@ p4_value=
 p5_MODE=IN
 p5_TYPE=FILE
 p5_default_value=
-p5_description=Specifies germline CNV (or other highly variant) regions to exclude from significance analysis. There are two forms for the cnv file: one allows CNVs to be identified by marker names in a single column; the other identifies excluded regions using their genomic location.
+p5_description=Specifies germline CNV (or other highly variant) regions to exclude from significance analysis. There are two forms for the cnv file\: one allows CNVs to be identified by marker names in a single column; the other identifies excluded regions using their genomic location.
 p5_fileFormat=CNV
 p5_flag=
 p5_name=cnv.file
@@ -262,4 +263,4 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Added Advanced Param sections, renamed broad.length.cutoff to focal.length.cutoff, updated defaults: focal.length.cutoff .50, confidence.level .90, gene.collapse.method extreme
+version=Updated captions, changed qv.thresh to q-value.threshold
