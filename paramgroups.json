@@ -1,5 +1,5 @@
 [
     {name: "Basic File Input", parameters: ["refgene.file", "seg.file", "markers.file", "cnv.file"]},
-    {name: "Additional Parameters", description:"These parameters are often adjusted, but may also be left at their defaults", parameters: ["amplifications.threshold", "deletions.threshold", "focal.length.cutoff", "gene.gistic", "confidence.level", "qv.thresh", "join.segment.size", "output.prefix"], hidden:true},
-    {name: "Advanced Parameters",description:"These parameters are best left at their default values unless you are familiar with their usage", parameters: ["array.list.file", "remove.X", "cap.val", "run.broad.analysis", "max.sample.segs", "arm.peel", "sample.center", "gene.collapse.method"], hidden:true}
+    {name: "Additional Parameters", description:"These parameters are often adjusted, but may also be left at their defaults", parameters: ["amplifications.threshold", "deletions.threshold", "focal.length.cutoff", "gene.gistic", "confidence.level", "q-value.threshold", "join.segment.size", "output.prefix"], hidden:true},
+    {name: "Advanced Parameters", description:"These parameters are best left at their default values unless you are familiar with their usage", parameters: ["array.list.file", "remove.X", "cap.val", "run.broad.analysis", "max.sample.segs", "arm.peel", "sample.center", "gene.collapse.method"], hidden:true}
 ]
