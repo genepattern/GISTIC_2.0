@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="create-zip" name="GISTIC_2.0">
-	<property name="dirOffset" value="../" />
-	<import file="${dirOffset}/commontargets.xml" />
-	<target name="create-zip" depends="init">
-		<antcall target="prezip" />
-		<zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
+    <property name="dirOffset" value="../" />
+    <import file="${dirOffset}/commontargets.xml" />
+    <target name="create-zip" depends="init">
+        <antcall target="prezip" />
+        <zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
             <zipfileset dir="." filemode="755" includes="gp_gistic2_from_seg"/>
             <fileset dir="." includes="*" />
-		</zip>
-		<antcall target="postzip" />
-	</target>
+        </zip>
+        <antcall target="postzip" />
+    </target>
 </project>
