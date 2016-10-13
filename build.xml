@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="create-zip" name="GISTIC_2.0">
-    <property name="dirOffset" value="../" />
+    <property name="dirOffset" value="../common_module_code" />
     <import file="${dirOffset}/commontargets.xml" />
     <target name="create-zip" depends="init">
         <antcall target="prezip" />
