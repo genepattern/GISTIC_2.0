@@ -2,7 +2,7 @@
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:6.11.3
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
-commandLine=<run-with-env> -u matlab-mcr/2014a <libdir>gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0
+commandLine=<run-with-env> -u matlab-mcr/2014a <libdir>gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer (version 2.0.23)
 fileFormat=png;v2.pdf;gistic.txt;seg.txt
@@ -55,7 +55,7 @@ p3_value=
 p4_MODE=
 p4_TYPE=TEXT
 p4_default_value=100000
-p4_description=Maximum allowed spacing between pseudo-markers, in bases. Pseudo-markers are generated when the markers file input is omitted.  Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number.  (DEFAULT\=10,00)\n\nWhen '-mk' is set then '-maxspace' is ignored.\n
+p4_description=Set maxspace to generate pseudo-markers instead of creating a markers file. The param defines the maximum allowed spacing between pseudo-markers, in bases. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number. When 'markers file' is set 'maxspace' is ignored. When neither are set, generate pseudo-markers, with maxspace=10,000.
 p4_fileFormat=
 p4_flag=-maxspace 
 p4_name=maxspace
@@ -287,6 +287,30 @@ p21_prefix_when_specified=
 p21_type=java.lang.String
 p21_value=
 
+p22_MODE=
+p22_TYPE=TEXT
+# <actual>=<display>
+p22_choices=\=autodetect;0=linear;1=log2
+p22_default_value=
+p22_description=The '-logdat' param to apply log2 ratio for SNP arrays, default=autodetect
+p22_fileFormat=
+p22_flag=
+p22_name=logdat
+p22_optional=on
+p22_prefix=
+p22_prefix_when_specified=-logdat 
+p22_type=java.lang.String
+p22_value=
+
+#
+# New param: ‘-logdat’ -logdat islog, e.g. default none, autodetect
+# -logdat 0, straight copy number data
+# -logdat 1, log2 ratio copy number data (for SNP arrays)
+# Default: (don’t include the -logdat on command line)
+# -logdat “” (empty string arg)
+#
+#
+
 pipelineModel=
 privacy=public
 quality=production
@@ -296,4 +320,4 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Added optional '-maxspace' param
+version=Added optional '-logdat' param
