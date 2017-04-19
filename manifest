@@ -320,4 +320,4 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Added optional '-logdat' param
+version=Updated to GISTIC v2.0.23, added '-maxspace' and '-logdat' params
