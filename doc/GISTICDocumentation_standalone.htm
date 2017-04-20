@@ -606,7 +606,7 @@ the aberration as well as the frequency of its occurrence across samples.<span
 style="mso-spacerun: yes">&nbsp; </span>False Discovery Rate q-values are then
 calculated for the aberrant regions, and regions with q-values below a
 user-defined threshold are considered significant.<span style="mso-spacerun:
-yes">&nbsp; </span>For each significant region, a “peak region” is identified,
+yes">&nbsp; </span>For each significant region, a "peak region" is identified,
 which is the part of the aberrant region with greatest amplitude and frequency
 of alteration.<span style="mso-spacerun: yes">&nbsp; </span>In addition, a
 "wide peak" is determined using a leave-one-out algorithm to allow for errors
@@ -760,7 +760,7 @@ normal'><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'><
   when the markers file input is omitted.<span
   style="mso-spacerun: yes">&nbsp; </span>Segments that contain fewer than this
   number of markers are joined to the neighboring segment that is closest in
-  copy number.<span style="mso-spacerun: yes">&nbsp; </span>(DEFAULT=10,00) </p>
+  copy number.<span style="mso-spacerun: yes">&nbsp; </span>(DEFAULT=10,000) </p>
   </td>
  </tr>
 
@@ -844,7 +844,7 @@ normal'><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'><
   <td width=269 valign=top style='width:268.8pt;padding:.1in 5.75pt .1in 5.75pt'>
   <p class=msonormal1><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Extension
   to append to all output files.<span style="mso-spacerun: yes">&nbsp;
-  </span>(DEFAULT=’’, no extension) </p>
+  </span>(DEFAULT='', no extension) </p>
   </td>
  </tr>
 
@@ -1518,9 +1518,9 @@ normal;mso-bidi-font-style:normal'><span style='font-family:Arial;mso-bidi-font-
 mso-bidi-font-family:"Times New Roman"'>Option #2</span></u><span
 style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>:<span
 style="mso-spacerun: yes">&nbsp; </span>A 6 column, tab-delimited file with an
-optional header row.<span style="mso-spacerun: yes">&nbsp; </span>The ‘CNV
-Identifier’ is for user use and can be arbitrary.<span style="mso-spacerun:
-yes">&nbsp; </span>‘Narrow Region Start’ and ‘Narrow Region End’ are also not
+optional header row.<span style="mso-spacerun: yes">&nbsp; </span>The 'CNV
+Identifier' is for user use and can be arbitrary.<span style="mso-spacerun:
+yes">&nbsp; </span>'Narrow Region Start' and 'Narrow Region End' are also not
 used.<span style="mso-spacerun: yes">&nbsp; </span>The column headers are:</p>
 
 <p class=MsoNormal style='margin-left:1.0in;text-indent:.25in;mso-list:l4 level1 lfo6;
@@ -1735,10 +1735,10 @@ first section can be identified by the key given in column 9 &#8211; it starts
 in row 2 and continues until the row that reads "Actual Copy Change
 Given."<span style="mso-spacerun: yes">&nbsp; </span>This section contains
 summarized data for each sample.<span style="mso-spacerun: yes">&nbsp; </span>A
-‘0’ indicates that the copy number of the sample was not amplified or deleted
+'0' indicates that the copy number of the sample was not amplified or deleted
 beyond the threshold amount in that peak region.<span style="mso-spacerun:
-yes">&nbsp; </span>A ‘1’ indicates that the sample had low-level copy number
-aberrations (exceeding the low threshold indicated in column 9), and a ‘2’
+yes">&nbsp; </span>A '1' indicates that the sample had low-level copy number
+aberrations (exceeding the low threshold indicated in column 9), and a '2'
 indicates that the sample had high-level copy number aberrations (exceeding the
 high threshold indicated in column 9).<i style='mso-bidi-font-style:normal;
 mso-bidi-font-style:normal'><o:p></o:p></i></span></p>
