@@ -15,7 +15,7 @@
                 <exclude name="README.md" />
                 <exclude name="build.xml" />
                 <exclude name="manifest.tmp" />
-                <exclude name="preprelease.version" />
+                <exclude name="prerelease.version" />
                 <exclude name="release.version" />
                 <include name="*" />
             </fileset>
