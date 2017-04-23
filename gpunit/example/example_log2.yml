@@ -1,0 +1,54 @@
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.11
+
+name: GISTIC_2.0_example_log2
+description: Run GISTIC analysis with examplefiles from the 6.0.23 release
+module: GISTIC_2.0
+params:
+    refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    seg.file:        "../../doc/examplefiles/segmentationfile.txt"
+    markers.file:    "../../doc/examplefiles/markersfile.txt"
+    array.list.file: "../../doc/examplefiles/arraylistfile.txt"
+    cnv.file:        "../../doc/examplefiles/cnvfile.txt"
+    gene.gistic.yes: 1
+    amplifications.threshold: 0.1
+    deletions.threshold: 0.1
+    join.segment.size:   4
+    q-value.threshold:   0.25
+    remove.X:    1
+    cap.val: 1.5
+    confidence.level:    0.90
+    run.broad.analysis:  0
+    focal.length.cutoff: 0.50
+    max.sample.segs: 2500
+    arm.peel:    0
+    sample.center:   median
+    gene.collapse.method:    extreme
+    output.prefix:   <seg.file_basename>
+    logdat: 1
+assertions:
+    jobStatus: success
+    files:
+        stdout.txt:
+            diff: ./expected/stdout.txt
+        segmentationfile.all_data_by_genes.txt:
+            diff: expected/segmentationfile.all_data_by_genes.txt
+        segmentationfile.all_lesions.conf_90.txt:
+            diff: expected/segmentationfile.all_lesions.conf_90.txt
+        segmentationfile.all_thresholded.by_genes.txt:
+            diff: expected/segmentationfile.all_thresholded.by_genes.txt
+        segmentationfile.amp_genes.conf_90.txt:
+            diff: expected/segmentationfile.amp_genes.conf_90.txt
+        segmentationfile.arraylistfile.txt:
+            diff: expected/segmentationfile.arraylistfile.txt
+        segmentationfile.broad_data_by_genes.txt:
+            diff: expected/segmentationfile.broad_data_by_genes.txt
+        segmentationfile.del_genes.conf_90.txt:
+            diff: expected/segmentationfile.del_genes.conf_90.txt
+        segmentationfile.focal_data_by_genes.txt:
+            diff: expected/segmentationfile.focal_data_by_genes.txt
+        segmentationfile.sample_cutoffs.txt:
+            diff: expected/segmentationfile.sample_cutoffs.txt
+        segmentationfile.sample_seg_counts.txt:
+            diff: expected/segmentationfile.sample_seg_counts.txt
+        segmentationfile.scores.gistic:
+            diff: expected/segmentationfile.scores.gistic
