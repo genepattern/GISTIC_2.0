@@ -1,6 +1,6 @@
 #lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.5
 #
-name: Valid Parameter Set 2
+name: valid_gene_gistic_no
 description: Test of gene gistic set to no
 module: GISTIC_2.0
 params:
@@ -28,28 +28,28 @@ assertions:
        jobStatus: success
        files:
            "segmentationfile.all_data_by_genes.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.all_data_by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_data_by_genes.txt
            "segmentationfile.all_lesions.conf_75.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.all_lesions.conf_75.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_lesions.conf_75.txt
            "segmentationfile.all_thresholded.by_genes.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.all_thresholded.by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_thresholded.by_genes.txt
            "segmentationfile.amp_genes.conf_75.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.amp_genes.conf_75.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.amp_genes.conf_75.txt
            "segmentationfile.arraylistfile.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.arraylistfile.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.arraylistfile.txt
            "segmentationfile.broad_data_by_genes.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.broad_data_by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.broad_data_by_genes.txt
            "segmentationfile.del_genes.conf_75.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.del_genes.conf_75.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.del_genes.conf_75.txt
            "segmentationfile.focal_data_by_genes.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes.txt
            "segmentationfile.regions_track.conf_75.bed":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75.bed
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75.bed
            "segmentationfile.sample_cutoffs.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.sample_cutoffs.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.sample_cutoffs.txt
            "segmentationfile.sample_seg_counts.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.sample_seg_counts.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.sample_seg_counts.txt
            "segmentationfile.scores.gistic":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/segmentationfile.scores.gistic
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.scores.gistic
            "stdout.txt":
-               diff: ftp://gpftp.broadinstitute.org/gpunit/GISTIC_2.0/v7/output/valid_gene_gistic_no/stdout.txt
+               diff: expected_output/valid_gene_gistic_no/stdout.txt
