@@ -1,1 +1,2 @@
-These tests are not passing with v6.10 as installed on the gpbroad server.
+Updated all tests with paths to gpftp files.
+Deleted test files that were in /xchip/sqa/Modules/TestSuiteData - unecessary duplication and not portable
