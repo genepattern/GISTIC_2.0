@@ -36,7 +36,7 @@ assertions:
            "segmentationfile.amp_genes.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.amp_genes.conf_75.txt
            "segmentationfile.arraylistfile.txt":
-               diff: expected_output/valid_gene_gistic_no/segmentationfile.arraylistfile.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.arraylistfile_2.0.23.txt
            "segmentationfile.broad_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.broad_data_by_genes.txt
            "segmentationfile.del_genes.conf_75.txt":
