@@ -18,7 +18,7 @@ params:
        cap.val: "1.5"
        confidence.level: "0.75"
        run.broad.analysis: "0"
-       broad.length.cutoff: "0.98"
+       focal.length.cutoff: "0.98"
        max.sample.segs: "2500"
        arm.peel: "0"
        sample.center: "median"
@@ -30,9 +30,9 @@ assertions:
            "segmentationfile.all_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.all_data_by_genes.txt
            "segmentationfile.all_lesions.conf_75.txt":
-               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_lesions.conf_75.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_lesions.conf_75_2.0.23.txt
            "segmentationfile.all_thresholded.by_genes.txt":
-               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_thresholded.by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.all_thresholded.by_genes_2.0.23.txt
            "segmentationfile.amp_genes.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.amp_genes.conf_75.txt
            "segmentationfile.arraylistfile.txt":
