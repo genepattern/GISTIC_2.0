@@ -44,7 +44,7 @@ assertions:
            "segmentationfile.focal_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes_2.0.23.txt
            "segmentationfile.regions_track.conf_75.bed":
-               diff: expected_output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75.bed
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75_2.0.23.bed
            "segmentationfile.sample_cutoffs.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.sample_cutoffs.txt
            "segmentationfile.sample_seg_counts.txt":
