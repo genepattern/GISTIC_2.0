@@ -304,7 +304,7 @@ p22_value=
 
 pipelineModel=
 privacy=public
-quality=production
+quality=preproduction
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
