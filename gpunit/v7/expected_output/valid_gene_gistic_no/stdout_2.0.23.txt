@@ -1,4 +1,4 @@
-GISTIC version 2.0.22
+GISTIC version 2.0.23
    100
 
     25
@@ -694,4 +694,3 @@ Writing output gene table files
 
        17400
 
-Warning: No display specified.  You will not be able to display graphics on the screen.
