@@ -42,7 +42,7 @@ assertions:
            "segmentationfile.del_genes.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.del_genes.conf_75.txt
            "segmentationfile.focal_data_by_genes.txt":
-               diff: expected_output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes.txt
+               diff: expected_output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes_2.0.23.txt
            "segmentationfile.regions_track.conf_75.bed":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75.bed
            "segmentationfile.sample_cutoffs.txt":
