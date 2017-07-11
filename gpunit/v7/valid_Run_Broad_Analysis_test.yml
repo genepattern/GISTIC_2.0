@@ -56,4 +56,4 @@ assertions:
             "segmentationfile.scores.gistic":
                 diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.scores.gistic
             "stdout.txt":
-                diff: expected_output/valid_Run_Broad_Analysis/stdout.txt
+                diff: expected_output/valid_Run_Broad_Analysis/stdout_2.0.23.txt
