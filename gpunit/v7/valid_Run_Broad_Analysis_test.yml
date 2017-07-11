@@ -38,7 +38,7 @@ assertions:
             "segmentationfile.arraylistfile.txt":
                 diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.arraylistfile.txt
             "segmentationfile.broad_data_by_genes.txt":
-                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_data_by_genes.txt
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_data_by_genes_2.0.23.txt
             "segmentationfile.broad_significance_results.txt":
                 diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_significance_results.txt
             "segmentationfile.broad_values_by_arm.txt":
