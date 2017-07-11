@@ -1,4 +1,4 @@
-GISTIC version 2.0.22
+GISTIC version 2.0.23
    100
 
     25
@@ -343,50 +343,6 @@ Deletion wide peak at chr22:39284907-48863057(100395:100561)
 Writing all_lesions file to: ./segmentationfile.all_lesions.conf_75.txt
 Adding gene annotations
 Writing output gene table files
-arm 1: 1p 4375 markers
-arm 2: 1q 4013 markers
-arm 3: 2p 3373 markers
-arm 4: 2q 5658 markers
-arm 5: 3p 3463 markers
-arm 6: 3q 3341 markers
-arm 7: 4p 1807 markers
-arm 8: 4q 5821 markers
-arm 9: 5p 1752 markers
-arm 10: 5q 5841 markers
-arm 11: 6p 2448 markers
-arm 12: 6q 4867 markers
-arm 13: 7p 2617 markers
-arm 14: 7q 3484 markers
-arm 15: 8p 1611 markers
-arm 16: 8q 4234 markers
-arm 17: 9p 1975 markers
-arm 18: 9q 2230 markers
-arm 19: 10p 1719 markers
-arm 20: 10q 3451 markers
-arm 21: 11p 1813 markers
-arm 22: 11q 2823 markers
-arm 23: 12p 1270 markers
-arm 24: 12q 3530 markers
-arm 25: 13p 0 markers
-arm 26: 13q 4742 markers
-arm 27: 14p 0 markers
-arm 28: 14q 3661 markers
-arm 29: 15p 0 markers
-arm 30: 15q 2746 markers
-arm 31: 16p 603 markers
-arm 32: 16q 1546 markers
-arm 33: 17p 472 markers
-arm 34: 17q 1226 markers
-arm 35: 18p 551 markers
-arm 36: 18q 2732 markers
-arm 37: 19p 109 markers
-arm 38: 19q 411 markers
-arm 39: 20p 1008 markers
-arm 40: 20q 857 markers
-arm 41: 21p 1 markers
-arm 42: 21q 1762 markers
-arm 43: 22p 0 markers
-arm 44: 22q 618 markers
 arm 1: 1p 4375 markers
 arm 2: 1q 4013 markers
 arm 3: 2p 3373 markers
@@ -959,4 +915,3 @@ arm 44: 22q 618 markers
 
        17400
 
-Warning: No display specified.  You will not be able to display graphics on the screen.
