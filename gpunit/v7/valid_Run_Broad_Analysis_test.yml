@@ -28,7 +28,7 @@ assertions:
         jobStatus: success
         files:
             "segmentationfile.all_data_by_genes.txt":
-                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_data_by_genes.txt
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_data_by_genes_2.0.23.txt
             "segmentationfile.all_lesions.conf_75.txt":
                 diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_lesions.conf_75.txt
             "segmentationfile.all_thresholded.by_genes.txt":
