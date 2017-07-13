@@ -28,7 +28,7 @@ assertions:
         jobStatus: success
         files:
             "segmentationfile.all_data_by_genes.txt":
-                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.all_data_by_genes.txt
+                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.all_data_by_genes_2.0.23.txt
             "segmentationfile.all_lesions.conf_75.txt":
                 diff: expected_output/valid_Gene_Collapse_min/segmentationfile.all_lesions.conf_75.txt
             "segmentationfile.all_thresholded.by_genes.txt":
@@ -38,11 +38,11 @@ assertions:
             "segmentationfile.arraylistfile.txt":
                 diff: expected_output/valid_Gene_Collapse_min/segmentationfile.arraylistfile.txt
             "segmentationfile.broad_data_by_genes.txt":
-                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.broad_data_by_genes.txt
+                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.broad_data_by_genes_2.0.23.txt
             "segmentationfile.del_genes.conf_75.txt":
                 diff: expected_output/valid_Gene_Collapse_min/segmentationfile.del_genes.conf_75.txt
             "segmentationfile.focal_data_by_genes.txt":
-                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.focal_data_by_genes.txt
+                diff: expected_output/valid_Gene_Collapse_min/segmentationfile.focal_data_by_genes_2.0.23.txt
             "segmentationfile.regions_track.conf_75.bed":
                 diff: expected_output/valid_Gene_Collapse_min/segmentationfile.regions_track.conf_75.bed
             "segmentationfile.sample_cutoffs.txt":
@@ -52,4 +52,4 @@ assertions:
             "segmentationfile.scores.gistic":
                 diff: expected_output/valid_Gene_Collapse_min/segmentationfile.scores.gistic
             "stdout.txt":
-                diff: expected_output/valid_Gene_Collapse_min/stdout.txt
+                diff: expected_output/valid_Gene_Collapse_min/stdout_2.0.23.txt

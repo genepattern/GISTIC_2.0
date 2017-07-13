@@ -1,6 +1,6 @@
 #lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.5
 #
-name: Valid samle center mean
+name: Valid sample center mean
 description: Test of sample center set to mean
 module: GISTIC_2.0
 params:
@@ -28,7 +28,7 @@ assertions:
         jobStatus: success
         files:
             "segmentationfile.all_data_by_genes.txt":
-                diff: expected_output/valid_Sample_Center_mean/segmentationfile.all_data_by_genes.txt
+                diff: expected_output/valid_Sample_Center_mean/segmentationfile.all_data_by_genes_2.0.23.txt
             "segmentationfile.all_lesions.conf_75.txt":
                 diff: expected_output/valid_Sample_Center_mean/segmentationfile.all_lesions.conf_75.txt
             "segmentationfile.all_thresholded.by_genes.txt":
@@ -38,11 +38,11 @@ assertions:
             "segmentationfile.arraylistfile.txt":
                 diff: expected_output/valid_Sample_Center_mean/segmentationfile.arraylistfile.txt
             "segmentationfile.broad_data_by_genes.txt":
-                diff: expected_output/valid_Sample_Center_mean/segmentationfile.broad_data_by_genes.txt
+                diff: expected_output/valid_Sample_Center_mean/segmentationfile.broad_data_by_genes_2.0.23.txt
             "segmentationfile.del_genes.conf_75.txt":
                 diff: expected_output/valid_Sample_Center_mean/segmentationfile.del_genes.conf_75.txt
             "segmentationfile.focal_data_by_genes.txt":
-                diff: expected_output/valid_Sample_Center_mean/segmentationfile.focal_data_by_genes.txt
+                diff: expected_output/valid_Sample_Center_mean/segmentationfile.focal_data_by_genes_2.0.23.txt
             "segmentationfile.regions_track.conf_75.bed":
                 diff: expected_output/valid_Sample_Center_mean/segmentationfile.regions_track.conf_75.bed
             "segmentationfile.sample_cutoffs.txt":
@@ -52,4 +52,4 @@ assertions:
             "segmentationfile.scores.gistic":
                 diff: expected_output/valid_Sample_Center_mean/segmentationfile.scores.gistic
             "stdout.txt":
-                diff: expected_output/valid_Sample_Center_mean/stdout.txt
+                diff: expected_output/valid_Sample_Center_mean/stdout_2.0.23.txt
