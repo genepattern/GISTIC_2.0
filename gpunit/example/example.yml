@@ -1,7 +1,7 @@
 #lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.11
 
 name: GISTIC_2.0_example
-description: GISTIC_2.0 with examplefiles from the 6.0.23 release
+description: GISTIC_2.0 with examplefiles from the 2.0.23 release
 module: GISTIC_2.0
 params:
     refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
@@ -24,7 +24,7 @@ params:
     arm.peel:    0
     sample.center:   median
     gene.collapse.method:    extreme
-    output.prefix:   "<seg.file_basename>_GISTIC_2.0_example>"
+    output.prefix:   "<seg.file_basename>_GISTIC_2.0_example"
 assertions:
     jobStatus: success
     # outputDir: expected
