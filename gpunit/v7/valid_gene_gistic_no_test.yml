@@ -27,29 +27,29 @@ params:
 assertions:
        jobStatus: success
        files:
-           "segmentationfile.all_data_by_genes.txt":
+           "segmentationfile_valid_gene_gistic_no.all_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.all_data_by_genes.txt
-           "segmentationfile.all_lesions.conf_75.txt":
+           "segmentationfile_valid_gene_gistic_no.all_lesions.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.all_lesions.conf_75_v2.0.23.txt
-           "segmentationfile.all_thresholded.by_genes.txt":
+           "segmentationfile_valid_gene_gistic_no.all_thresholded.by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.all_thresholded.by_genes_2.0.23.txt
-           "segmentationfile.amp_genes.conf_75.txt":
+           "segmentationfile_valid_gene_gistic_no.amp_genes.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.amp_genes.conf_75.txt
-           "segmentationfile.arraylistfile.txt":
+           "segmentationfile_valid_gene_gistic_no.arraylistfile.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.arraylistfile_2.0.23.txt
-           "segmentationfile.broad_data_by_genes.txt":
+           "segmentationfile_valid_gene_gistic_no.broad_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.broad_data_by_genes_2.0.23.txt
-           "segmentationfile.del_genes.conf_75.txt":
+           "segmentationfile_valid_gene_gistic_no.del_genes.conf_75.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.del_genes.conf_75.txt
-           "segmentationfile.focal_data_by_genes.txt":
+           "segmentationfile_valid_gene_gistic_no.focal_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.focal_data_by_genes_2.0.23.txt
-           "segmentationfile.regions_track.conf_75.bed":
+           "segmentationfile_valid_gene_gistic_no.regions_track.conf_75.bed":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.regions_track.conf_75_2.0.23.bed
-           "segmentationfile.sample_cutoffs.txt":
+           "segmentationfile_valid_gene_gistic_no.sample_cutoffs.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.sample_cutoffs.txt
-           "segmentationfile.sample_seg_counts.txt":
+           "segmentationfile_valid_gene_gistic_no.sample_seg_counts.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.sample_seg_counts.txt
-           "segmentationfile.scores.gistic":
+           "segmentationfile_valid_gene_gistic_no.scores.gistic":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.scores.gistic
            "stdout.txt":
                diff: expected_output/valid_gene_gistic_no/stdout_2.0.23.txt

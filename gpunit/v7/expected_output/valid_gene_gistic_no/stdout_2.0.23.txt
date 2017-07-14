@@ -241,7 +241,7 @@ Deletion wide peak at chr14:82490390-82782104(85216:85228)
 Deletion wide peak at chr15:25703302-57093502(86027:87468)
 Deletion wide peak at chr19:47364600-63458980(96145:96315)
 Deletion wide peak at chr22:39312633-48863057(100396:100561)
-Writing all_lesions file to: ./segmentationfile.all_lesions.conf_75.txt
+Writing all_lesions file to: ./segmentationfile_valid_gene_gistic_no.all_lesions.conf_75.txt
 Adding gene annotations
 Writing output gene table files
         1000
