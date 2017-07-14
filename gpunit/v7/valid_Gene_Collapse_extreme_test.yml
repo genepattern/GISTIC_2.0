@@ -27,29 +27,29 @@ params:
 assertions:
        jobStatus: success
        files:
-            "segmentationfile.all_data_by_genes.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.all_data_by_genes.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.all_data_by_genes_2.0.23.txt
-            "segmentationfile.all_lesions.conf_75.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.all_lesions.conf_75.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.all_lesions.conf_75.txt
-            "segmentationfile.all_thresholded.by_genes.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.all_thresholded.by_genes.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.all_thresholded.by_genes.txt
-            "segmentationfile.amp_genes.conf_75.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.amp_genes.conf_75.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.amp_genes.conf_75.txt
-            "segmentationfile.arraylistfile.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.arraylistfile.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.arraylistfile.txt
-            "segmentationfile.broad_data_by_genes.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.broad_data_by_genes.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.broad_data_by_genes_2.0.23.txt
-            "segmentationfile.del_genes.conf_75.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.del_genes.conf_75.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.del_genes.conf_75.txt
-            "segmentationfile.focal_data_by_genes.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.focal_data_by_genes.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.focal_data_by_genes_2.0.23.txt
-            "segmentationfile.regions_track.conf_75.bed":
+            "segmentationfile_Valid_Gene_Collapse_extreme.regions_track.conf_75.bed":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.regions_track.conf_75.bed
-            "segmentationfile.sample_cutoffs.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.sample_cutoffs.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.sample_cutoffs.txt
-            "segmentationfile.sample_seg_counts.txt":
+            "segmentationfile_Valid_Gene_Collapse_extreme.sample_seg_counts.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.sample_seg_counts.txt
-            "segmentationfile.scores.gistic":
+            "segmentationfile_Valid_Gene_Collapse_extreme.scores.gistic":
                 diff: expected_output/valid_Gene_Collapse_extreme/segmentationfile.scores.gistic
             "stdout.txt":
                 diff: expected_output/valid_Gene_Collapse_extreme/stdout_2.0.23.txt
