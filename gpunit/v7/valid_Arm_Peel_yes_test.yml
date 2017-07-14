@@ -27,29 +27,29 @@ params:
 assertions:
         jobStatus: success
         files:
-            "segmentationfile.all_data_by_genes.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.all_data_by_genes.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.all_data_by_genes_2.0.23.txt
-            "segmentationfile.all_lesions.conf_75.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.all_lesions.conf_75.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.all_lesions.conf_75.txt
-            "segmentationfile.all_thresholded.by_genes.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.all_thresholded.by_genes.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.all_thresholded.by_genes.txt
-            "segmentationfile.amp_genes.conf_75.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.amp_genes.conf_75.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.amp_genes.conf_75.txt
-            "segmentationfile.arraylistfile.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.arraylistfile.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.arraylistfile.txt
-            "segmentationfile.broad_data_by_genes.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.broad_data_by_genes.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.broad_data_by_genes_2.0.23.txt
-            "segmentationfile.del_genes.conf_75.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.del_genes.conf_75.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.del_genes.conf_75.txt
-            "segmentationfile.focal_data_by_genes.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.focal_data_by_genes.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.focal_data_by_genes_2.0.23.txt
-            "segmentationfile.regions_track.conf_75.bed":
+            "segmentationfile_Valid_Arm_Peel_Yes.regions_track.conf_75.bed":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.regions_track.conf_75.bed
-            "segmentationfile.sample_cutoffs.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.sample_cutoffs.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.sample_cutoffs.txt
-            "segmentationfile.sample_seg_counts.txt":
+            "segmentationfile_Valid_Arm_Peel_Yes.sample_seg_counts.txt":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.sample_seg_counts.txt
-            "segmentationfile.scores.gistic":
+            "segmentationfile_Valid_Arm_Peel_Yes.scores.gistic":
                 diff: expected_output/valid_Arm_Peel_yes/segmentationfile.scores.gistic
             "stdout.txt":
                 diff: expected_output/valid_Arm_Peel_yes/stdout_2.0.23.txt
