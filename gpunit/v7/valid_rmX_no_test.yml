@@ -27,29 +27,29 @@ params:
 assertions:
         jobStatus: success
         files:
-            "segmentationfile.all_data_by_genes.txt":
+            "segmentationfile_valid_rmX_no_diff.all_data_by_genes.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.all_data_by_genes.txt
-            "segmentationfile.all_lesions.conf_75.txt":
+            "segmentationfile_valid_rmX_no_diff.all_lesions.conf_75.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.all_lesions.conf_75.txt
-            "segmentationfile.all_thresholded.by_genes.txt":
+            "segmentationfile_valid_rmX_no_diff.all_thresholded.by_genes.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.all_thresholded.by_genes.txt
-            "segmentationfile.amp_genes.conf_75.txt":
+            "segmentationfile_valid_rmX_no_diff.amp_genes.conf_75.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.amp_genes.conf_75.txt
-            "segmentationfile.arraylistfile.txt":
+            "segmentationfile_valid_rmX_no_diff.arraylistfile.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.arraylistfile.txt
-            "segmentationfile.broad_data_by_genes.txt":
+            "segmentationfile_valid_rmX_no_diff.broad_data_by_genes.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.broad_data_by_genes.txt
-            "segmentationfile.del_genes.conf_75.txt":
+            "segmentationfile_valid_rmX_no_diff.del_genes.conf_75.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.del_genes.conf_75.txt
-            "segmentationfile.focal_data_by_genes.txt":
+            "segmentationfile_valid_rmX_no_diff.focal_data_by_genes.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.focal_data_by_genes.txt
-            "segmentationfile.regions_track.conf_75.bed":
+            "segmentationfile_valid_rmX_no_diff.regions_track.conf_75.bed":
                 diff: expected_output/valid_rmX_no/segmentationfile.regions_track.conf_75.bed
-            "segmentationfile.sample_cutoffs.txt":
+            "segmentationfile_valid_rmX_no_diff.sample_cutoffs.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.sample_cutoffs.txt
-            "segmentationfile.sample_seg_counts.txt":
+            "segmentationfile_valid_rmX_no_diff.sample_seg_counts.txt":
                 diff: expected_output/valid_rmX_no/segmentationfile.sample_seg_counts.txt
-            "segmentationfile.scores.gistic":
+            "segmentationfile_valid_rmX_no_diff.scores.gistic":
                 diff: expected_output/valid_rmX_no/segmentationfile.scores.gistic
             "stdout.txt":
                 diff: expected_output/valid_rmX_no/stdout.txt
