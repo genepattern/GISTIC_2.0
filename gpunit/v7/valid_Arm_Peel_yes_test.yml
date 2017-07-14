@@ -23,7 +23,7 @@ params:
        arm.peel: "1"
        sample.center: "median"
        gene.collapse.method: "mean"
-       output.prefix: "<seg.file_basename>"
+       output.prefix: "<seg.file_basename>_Valid_Arm_Peel_Yes"
 assertions:
         jobStatus: success
         files:

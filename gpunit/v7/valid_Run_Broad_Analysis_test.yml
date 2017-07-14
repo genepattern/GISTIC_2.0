@@ -23,7 +23,7 @@ params:
        arm.peel: "0"
        sample.center: "median"
        gene.collapse.method: "mean"
-       output.prefix: "<seg.file_basename>"
+       output.prefix: "<seg.file_basename>_Run_Broad_Analysis"
 assertions:
         jobStatus: success
         files:

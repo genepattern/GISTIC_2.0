@@ -23,7 +23,7 @@ params:
        arm.peel: "0"
        sample.center: "mean"
        gene.collapse.method: "mean"
-       output.prefix: "<seg.file_basename>"
+       output.prefix: "<seg.file_basename>_Valid_sample_center_mean"
 assertions:
         jobStatus: success
         files:

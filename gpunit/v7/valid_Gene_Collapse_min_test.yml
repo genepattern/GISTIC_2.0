@@ -23,7 +23,7 @@ params:
        arm.peel: "0"
        sample.center: "median"
        gene.collapse.method: "min"
-       output.prefix: "<seg.file_basename>"
+       output.prefix: "<seg.file_basename>_Valid_gene_collapse_min"
 assertions:
         jobStatus: success
         files:

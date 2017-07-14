@@ -23,7 +23,7 @@ params:
     arm.peel:    0
     sample.center:   median
     gene.collapse.method:    extreme
-    output.prefix:   <seg.file_basename>
+    output.prefix:   "<seg.file_basename>_GISTIC_2.0_example_log2"
     logdat: 1
 assertions:
     jobStatus: success
