@@ -30,25 +30,25 @@ assertions:
     files:
         stdout.txt:
             diff: ./expected/stdout_log2.txt
-        segmentationfile.all_data_by_genes.txt:
+        segmentationfile_GISTIC_2.0_example_log2.all_data_by_genes.txt:
             diff: expected/segmentationfile.all_data_by_genes.txt
-        segmentationfile.all_lesions.conf_90.txt:
+        segmentationfile_GISTIC_2.0_example_log2.all_lesions.conf_90.txt:
             diff: expected/segmentationfile.all_lesions.conf_90.txt
-        segmentationfile.all_thresholded.by_genes.txt:
+        segmentationfile_GISTIC_2.0_example_log2.all_thresholded.by_genes.txt:
             diff: expected/segmentationfile.all_thresholded.by_genes.txt
-        segmentationfile.amp_genes.conf_90.txt:
+        segmentationfile_GISTIC_2.0_example_log2.amp_genes.conf_90.txt:
             diff: expected/segmentationfile.amp_genes.conf_90.txt
-        segmentationfile.arraylistfile.txt:
+        segmentationfile_GISTIC_2.0_example_log2.arraylistfile.txt:
             diff: expected/segmentationfile.arraylistfile.txt
-        segmentationfile.broad_data_by_genes.txt:
+        segmentationfile_GISTIC_2.0_example_log2.broad_data_by_genes.txt:
             diff: expected/segmentationfile.broad_data_by_genes.txt
-        segmentationfile.del_genes.conf_90.txt:
+        segmentationfile_GISTIC_2.0_example_log2.del_genes.conf_90.txt:
             diff: expected/segmentationfile.del_genes.conf_90.txt
-        segmentationfile.focal_data_by_genes.txt:
+        segmentationfile_GISTIC_2.0_example_log2.focal_data_by_genes.txt:
             diff: expected/segmentationfile.focal_data_by_genes.txt
-        segmentationfile.sample_cutoffs.txt:
+        segmentationfile_GISTIC_2.0_example_log2.sample_cutoffs.txt:
             diff: expected/segmentationfile.sample_cutoffs.txt
-        segmentationfile.sample_seg_counts.txt:
+        segmentationfile_GISTIC_2.0_example_log2.sample_seg_counts.txt:
             diff: expected/segmentationfile.sample_seg_counts.txt
-        segmentationfile.scores.gistic:
+        segmentationfile_GISTIC_2.0_example_log2.scores.gistic:
             diff: expected/segmentationfile.scores.gistic
