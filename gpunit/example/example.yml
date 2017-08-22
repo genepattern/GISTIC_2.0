@@ -39,7 +39,7 @@ assertions:
             diff: expected/segmentationfile.all_thresholded.by_genes.txt
         segmentationfile_GISTIC_2.0_example.amp_genes.conf_90.txt:
             diff: expected/segmentationfile.amp_genes.conf_90.txt
-        segmentationfile_GISTIC_2.0_examplearraylistfile.txt:
+        segmentationfile_GISTIC_2.0_example.arraylistfile.txt:
             diff: expected/segmentationfile.arraylistfile.txt
         segmentationfile_GISTIC_2.0_example.broad_data_by_genes.txt:
             diff: expected/segmentationfile.broad_data_by_genes.txt
