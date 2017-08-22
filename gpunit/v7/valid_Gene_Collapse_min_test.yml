@@ -1,5 +1,4 @@
-#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.5
-#
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
 name: Valid gene collapse min
 description: Test of gene collapse method set to min
 module: GISTIC_2.0

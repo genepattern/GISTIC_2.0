@@ -1,4 +1,4 @@
-#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.11
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
 
 name: GISTIC_2.0_example_log2
 description: Run GISTIC analysis with examplefiles from the 6.0.23 release

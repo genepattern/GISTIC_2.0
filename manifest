@@ -311,4 +311,4 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Updated to GISTIC v2.0.23, added '-maxspace' and '-logdat' params
+version=Updated to GISTIC v2.0.23, added '-maxspace' and '-logdat' params, no longer requires a markers file
