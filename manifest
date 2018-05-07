@@ -54,7 +54,7 @@ p3_value=
 
 p4_MODE=
 p4_TYPE=TEXT
-p4_default_value=100000
+p4_default_value=10000
 p4_description=Set maxspace to generate pseudo-markers instead of creating a markers file. The param defines the maximum allowed spacing between pseudo-markers, in bases. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number. When 'markers file' is set 'maxspace' is ignored. When neither are set, generate pseudo-markers, with maxspace=10,000.
 p4_fileFormat=
 p4_flag=-maxspace 
