@@ -1,0 +1,59 @@
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
+#
+name: Run Broad Analysis
+description: Test of run broad analysis set to yes.
+module: GISTIC_2.0
+params:
+       refgene.file: "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+       seg.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/segmentationfile.txt"
+       markers.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/markersfile.txt"
+       array.list.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/arraylistfile.txt"
+       cnv.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/cnvfile.txt"
+       gene.gistic: "1"
+       amplifications.threshold: "0.1"
+       deletions.threshold: "0.1"
+       join.segment.size: "4"
+       qv.thresh: "0.25"
+       remove.X: "1"
+       cap.val: "1.5"
+       confidence.level: "0.75"
+       run.broad.analysis: "1"
+       focal.length.cutoff: "0.98"
+       max.sample.segs: "2500"
+       arm.peel: "0"
+       sample.center: "median"
+       gene.collapse.method: "mean"
+       output.prefix: "<seg.file_basename>_Run_Broad_Analysis"
+assertions:
+        jobStatus: success
+        files:
+            "segmentationfile_Run_Broad_Analysis.all_data_by_genes.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_data_by_genes_2.0.23.txt
+            "segmentationfile_Run_Broad_Analysis.all_lesions.conf_75.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_lesions.conf_75.txt
+            "segmentationfile_Run_Broad_Analysis.all_thresholded.by_genes.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.all_thresholded.by_genes.txt
+            "segmentationfile_Run_Broad_Analysis.amp_genes.conf_75.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.amp_genes.conf_75.txt
+            "segmentationfile_Run_Broad_Analysis.arraylistfile.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.arraylistfile.txt
+            "segmentationfile_Run_Broad_Analysis.broad_data_by_genes.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_data_by_genes_2.0.23.txt
+            "segmentationfile_Run_Broad_Analysis.broad_significance_results.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_significance_results_2.0.23.txt
+            "segmentationfile_Run_Broad_Analysis.broad_values_by_arm.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.broad_values_by_arm.txt
+            "segmentationfile_Run_Broad_Analysis.del_genes.conf_75.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.del_genes.conf_75.txt
+            "segmentationfile_Run_Broad_Analysis.focal_data_by_genes.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.focal_data_by_genes_2.0.23.txt
+            "segmentationfile_Run_Broad_Analysis.regions_track.conf_75.bed":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.regions_track.conf_75.bed
+            "segmentationfile_Run_Broad_Analysis.sample_cutoffs.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.sample_cutoffs.txt
+            "segmentationfile_Run_Broad_Analysis.sample_seg_counts.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.sample_seg_counts.txt
+            "segmentationfile_Run_Broad_Analysis.scores.gistic":
+                diff: expected_output/valid_Run_Broad_Analysis/segmentationfile.scores.gistic
+            "stdout.txt":
+                diff: expected_output/valid_Run_Broad_Analysis/stdout_2.0.23.txt

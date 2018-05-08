@@ -1,0 +1,28 @@
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
+name: GISTIC_2.0_example_no_markers_file
+description: GISTIC_2.0 with examplefiles from the 6.0.23 release, without a markers file
+module: GISTIC_2.0
+params:
+    refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    seg.file:        "../../doc/examplefiles/segmentationfile.txt"
+    markers.file:    ""
+    maxspace:        "10000"
+    array.list.file: "../../doc/examplefiles/arraylistfile.txt"
+    cnv.file:        ""
+    gene.gistic.yes: 1
+    amplifications.threshold: 0.1
+    deletions.threshold: 0.1
+    join.segment.size:   4
+    q-value.threshold:   0.25
+    remove.X:    1
+    cap.val: 1.5
+    confidence.level:    0.90
+    run.broad.analysis:  0
+    focal.length.cutoff: 0.50
+    max.sample.segs: 2500
+    arm.peel:    0
+    sample.center:   median
+    gene.collapse.method:    extreme
+    output.prefix:   "<seg.file_basename>_GISTIC_2.0_example_no_markers_file"
+assertions:
+    jobStatus: success

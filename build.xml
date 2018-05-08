@@ -9,7 +9,16 @@
             filesonly="true"
         >
             <zipfileset dir="." filemode="755" file="gp_gistic2_from_seg" />
-            <fileset dir="."><exclude name="gp_gistic2_from_seg" /><include name="*"/></fileset>
+            <fileset dir=".">
+                <exclude name="gp_gistic2_from_seg" />
+                <exclude name="gistic_script" />
+                <exclude name="README.md" />
+                <exclude name="build.xml" />
+                <exclude name="manifest.tmp" />
+                <exclude name="prerelease.version" />
+                <exclude name="release.version" />
+                <include name="*" />
+            </fileset>
         </zip>
         <antcall target="postzip" />
     </target>
