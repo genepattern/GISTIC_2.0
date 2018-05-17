@@ -1,9 +1,17 @@
 #Wed, 19 Apr 2017 01:07:58 -0400
 JVMLevel=
-LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.4
+LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.6
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
 #commandLine=<run-with-env> -u matlab-mcr/2014a <libdir>gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
-commandLine=<gp_gistic2_from_seg> -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
+#commandLine=<gp_gistic2_from_seg> -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
+#commandLine=<run-with-env> -e gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
+commandLine=<run-with-env> \
+  -e LD_LIBRARY_PATH=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/runtime/glnxa64\
+                   :/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/bin/glnxa64\
+                   :/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/sys/os/glnxa64 \
+  -e XAPPLRESDIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/X11/app-defaults \
+  gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
+
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer (version 2.0.23)
 fileFormat=png;v2.pdf;gistic.txt;seg.txt
@@ -313,31 +321,7 @@ serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Containerized GISTIC v2.0.23, set job.docker.image='genepattern/docker-gistic:0.11, gp_gistic2_from_seg cmd in libdir'
+#version=Containerized GISTIC v2.0.23 in 'genepattern/docker-gistic:0.12'
+version=updated job.docker.image to 'docker-gistic:0.12', commandLine=<run-with-env> -e LD_LIBRARY_PATH ...
 
-job.docker.image=genepattern/docker-gistic:0.11
-
-#
-# Example config_custom.yaml entry
-#   for running in a local docker container
-#
-#module.properties:
-#    "GISTIC_2.0":
-#        executor: LocalJobRunner
-#
-#        # define 'run-with-mcr_2014a' 
-#        #   alternative to '<run-with-env> -u matlab-mcr/2014a' ...
-#        # 
-#        mcr_base: "/usr/local/MATLAB/MATLAB_Compiler_Runtime"
-#        mcr_version: "v83"
-#        mcr_home: "<mcr_base>/<mcr_version>"
-#        env.LD_LIBRARY_PATH: "\
-#             <mcr_home>/runtime/glnxa64\
-#            :<mcr_home>/bin/glnxa64\
-#            :<mcr_home>/sys/os/glnxa64"
-#        env.XAPPLRESDIR: "\
-#             <mcr_home>/X11/app-defaults"
-#        run-with-mcr_2014a: "bash <wrapper-scripts>/run-with-env.sh \
-#            -e LD_LIBRARY_PATH=<env.LD_LIBRARY_PATH> \
-#            -e XAPPLRESDIR=<env.XAPPLRESDIR>"
-#        gp_gistic2_from_seg: "<run-with-docker> -- <run-with-mcr_2014a> <libdir>gp_gistic2_from_seg"
+job.docker.image=genepattern/docker-gistic:0.12
