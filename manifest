@@ -1,10 +1,12 @@
 #Wed, 19 Apr 2017 01:07:58 -0400
 JVMLevel=
-LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.7
+LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.8
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
 
-job.docker.image=genepattern/docker-gistic:0.12
-commandLine=runMatlab.sh gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
+#job.docker.image=genepattern/docker-gistic:0.12
+job.docker.image=genepattern/docker-gistic:latest
+
+commandLine=gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
 
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer (version 2.0.23)
@@ -316,4 +318,4 @@ taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
 #version=Containerized GISTIC v2.0.23 in 'genepattern/docker-gistic:0.12'
-version=commandLine=runMatlab.sh gp_gistic2_from_seg ..., runMatlab.sh initializes the environment in the container
+version=commandLine=gp_gistic2_from_seg ..., 'genepattern/docker-gistic:latest'
