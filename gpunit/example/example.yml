@@ -30,6 +30,9 @@ assertions:
     # outputDir: expected
     files:
         stdout.txt:
+            # custom diff, strip logging lines from stdout.txt
+            #   sed -e '/--- DONE setting up environment variables ---/d'
+            diffCmd: [ "./diff-skip-lines.sh", "/--- DONE setting up environment variables ---/d"]
             diff: ./expected/stdout.txt
         segmentationfile_GISTIC_2.0_example.all_data_by_genes.txt:
             diff: expected/segmentationfile.all_data_by_genes.txt
