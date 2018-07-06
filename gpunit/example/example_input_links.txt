@@ -1,0 +1,18 @@
+For convenience, here are links to input files, for running hand-crafted tests via the GP web interface. 
+I arbitrarily used the hg16.mat refgene file. 
+
+Copied from v2.0.23 documentation ...
+    http://software.broadinstitute.org/cancer/software/genepattern/doc/GISTIC_2.0/2.0.23/GISTICDocumentation_standalone.htm
+
+Example Segmentation File:
+    http://software.broadinstitute.org/cancer/software/genepattern/doc/GISTIC_2.0/2.0.23/examplefiles/segmentationfile.txt
+
+Example Markers File:
+    http://software.broadinstitute.org/cancer/software/genepattern/doc/GISTIC_2.0/2.0.23/examplefiles/markersfile.txt
+
+Example Array List File:
+    http://software.broadinstitute.org/cancer/software/genepattern/doc/GISTIC_2.0/2.0.23/examplefiles/arraylistfile.txt
+
+Example CNV File:
+    http://software.broadinstitute.org/cancer/software/genepattern/doc/GISTIC_2.0/2.0.23/examplefiles/cnvfile.txt
+
