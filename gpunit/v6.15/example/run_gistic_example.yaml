@@ -1,0 +1,78 @@
+#
+# test case based on the run_gistic_example included in the 2.0.23 release of GISTIC
+# with input files copied from the examplefiles and refgenefiles directories.
+#
+# The example_results were generated with this docker command line:
+#   docker run -v `pwd`:`pwd` genepattern/docker-gistic:0.13
+#     gp_gistic2_from_seg -b `pwd`/example_results 
+#       -seg `pwd`/examplefiles/segmentationfile.txt 
+#       -mk `pwd`/examplefiles/markersfile.txt 
+#       -refgene `pwd`/refgenefiles/hg16.mat 
+#       -alf `pwd`/examplefiles/arraylistfile.txt 
+#       -cnv `pwd`/examplefiles/cnvfile.txt 
+#       -genegistic 1 
+#       -smallmem 1 
+#       -broad 1 
+#       -brlen 0.5 
+#       -conf 0.90 
+#       -armpeel 1 
+#       -savegene 1 
+#       -gcm extreme 
+#   >> stdout.txt
+
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15
+
+name: GISTIC_2.0_example
+description: GISTIC_2.0 with examplefiles from the 2.0.23 release
+module: GISTIC_2.0
+params:
+    seg.file:        "examplefiles/segmentationfile.txt"
+    markers.file:    "examplefiles/markersfile.txt"
+    #refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    refgene.file:    "refgenefiles/hg16.mat"
+    array.list.file: "examplefiles/arraylistfile.txt"
+    cnv.file:        "examplefiles/cnvfile.txt"
+    gene.gistic:          "1"
+    run.broad.analysis:   "1"
+    # -brlen 0.5
+    focal.length.cutoff:  "0.5"
+    # -conf 0.90
+    confidence.level:     "0.90"
+    # -armpeel 1
+    arm.peel:             "1"
+    # -gcm extreme
+    gene.collapse.method: "extreme"
+
+assertions:
+    jobStatus: success
+    files:
+        stdout.txt:
+            # custom diff to '--strip-trailing-cr'
+            diffCmd: [ "diff", "--strip-trailing-cr" ]
+            diff: ./example_results/stdout.txt
+        all_data_by_genes.txt:
+            diff: example_results/all_data_by_genes.txt
+        all_lesions.conf_90.txt:
+            diff: example_results/all_lesions.conf_90.txt
+        all_thresholded.by_genes.txt:
+            diff: example_results/all_thresholded.by_genes.txt
+        amp_genes.conf_90.txt:
+            diff: example_results/amp_genes.conf_90.txt
+        arraylistfile.txt:
+            diff: example_results/arraylistfile.txt
+        broad_data_by_genes.txt:
+            diff: example_results/broad_data_by_genes.txt
+        broad_significance_results.txt:
+            diff: example_results/broad_significance_results.txt
+        broad_values_by_arm.txt:
+            diff: example_results/broad_values_by_arm.txt
+        del_genes.conf_90.txt:
+            diff: example_results/del_genes.conf_90.txt
+        focal_data_by_genes.txt:
+            diff: example_results/focal_data_by_genes.txt
+        sample_cutoffs.txt:
+            diff: example_results/sample_cutoffs.txt
+        sample_seg_counts.txt:
+            diff: example_results/sample_seg_counts.txt
+        scores.gistic:
+            diff: example_results/scores.gistic
