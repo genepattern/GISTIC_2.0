@@ -45,10 +45,10 @@ params:
 
 assertions:
     jobStatus: success
+    # custom diff to '--strip-trailing-cr'
+    diffCmd: [ "diff", "--strip-trailing-cr" ]
     files:
         stdout.txt:
-            # custom diff to '--strip-trailing-cr'
-            diffCmd: [ "diff", "--strip-trailing-cr" ]
             diff: ./example_results/stdout.txt
         all_data_by_genes.txt:
             diff: example_results/all_data_by_genes.txt
