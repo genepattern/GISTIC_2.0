@@ -3,3 +3,4 @@
 #   ./expected/segmentationfile.arraylistfile.txt: ASCII text, with CRLF, LF line terminators
 #
 *.arraylistfile.txt        text eol=crlf
+*.bed                      text eol=crlf
