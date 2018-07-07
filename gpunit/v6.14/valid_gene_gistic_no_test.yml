@@ -26,6 +26,7 @@ params:
        output.prefix: "<seg.file_basename>_valid_gene_gistic_no"
 assertions:
        jobStatus: success
+       diffCmd: [ "diff", "--strip-trailing-cr" ]
        files:
            "segmentationfile_valid_gene_gistic_no.all_data_by_genes.txt":
                diff: expected_output/valid_gene_gistic_no/segmentationfile.all_data_by_genes.txt
