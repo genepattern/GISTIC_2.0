@@ -26,20 +26,18 @@ commandLine=gp_gistic2_from_seg -b . \
  -armpeel <arm.peel> \
  <sample.center> \
  -gcm <gene.collapse.method> \
+ -arb 1 \
+ -peak_type robust \
  <output.prefix> \
+ -genepattern 1 \
+ -twosides 0 \
+ -saveseg 0 \
+ -savedata 0 \
+ -smalldisk 0 \
  -smallmem 1 \
  -savegene 1 \
+ -v 0 \
  <logdat>
-
-# -genepattern 1
-# -twosides 0 
-# -saveseg 0 
-# -savedata 0
-# -arb 1
-# -peak_type robust
-# -smalldisk 0
-# -v 0
-
 
 cpuType=any
 description=Genomic Identification of Significant Targets in Cancer (version 2.0.23)
@@ -380,5 +378,6 @@ userid=GenePattern
 #version=removed '-smalldisk 0' command line arg
 #version=removed '-v 0' command line arg
 #version=set prefix_when_specified for 'cap.val', removed default value
-version=updated command line args to match the 2.0.23 example
-
+#version=updated command line args to match the 2.0.23 example
+#version=add '-genepattern 1' back to the command line
+version=added the rest of the v6.14 hard-coded args back to the command line
