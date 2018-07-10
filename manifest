@@ -380,4 +380,5 @@ userid=GenePattern
 #version=set prefix_when_specified for 'cap.val', removed default value
 #version=updated command line args to match the 2.0.23 example
 #version=add '-genepattern 1' back to the command line
-version=added the rest of the v6.14 hard-coded args back to the command line
+#version=added the rest of the v6.14 hard-coded args back to the command line
+version=reorderded command line args to match v6.14
