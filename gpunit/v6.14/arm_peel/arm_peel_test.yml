@@ -1,0 +1,57 @@
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
+#
+name: gistic_arm_peel
+description: Test of arm peel set to yes.
+module: GISTIC_2.0
+params:
+       refgene.file: "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+       seg.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/segmentationfile.txt"
+       markers.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/markersfile.txt"
+       array.list.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/arraylistfile.txt"
+       cnv.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/cnvfile.txt"
+       gene.gistic: "1"
+       amplifications.threshold: "0.1"
+       deletions.threshold: "0.1"
+       join.segment.size: "4"
+       "q-value.threshold": "0.25"
+       remove.X: "1"
+       cap.val: "1.5"
+       confidence.level: "0.75"
+       run.broad.analysis: "0"
+       focal.length.cutoff: "0.98"
+       max.sample.segs: "2500"
+       arm.peel: "1"
+       sample.center: "median"
+       gene.collapse.method: "mean"
+       output.prefix: "<seg.file_basename>"
+       maxspace: "10000"
+assertions:
+        jobStatus: success
+        diffCmd: [ "diff", "--strip-trailing-cr" ]
+        files:
+            "segmentationfile.all_data_by_genes.txt":
+                diff: expected/segmentationfile.all_data_by_genes.txt
+            "segmentationfile.all_lesions.conf_75.txt":
+                diff: expected/segmentationfile.all_lesions.conf_75.txt
+            "segmentationfile.all_thresholded.by_genes.txt":
+                diff: expected/segmentationfile.all_thresholded.by_genes.txt
+            "segmentationfile.amp_genes.conf_75.txt":
+                diff: expected/segmentationfile.amp_genes.conf_75.txt
+            "segmentationfile.arraylistfile.txt":
+                diff: expected/segmentationfile.arraylistfile.txt
+            "segmentationfile.broad_data_by_genes.txt":
+                diff: expected/segmentationfile.broad_data_by_genes.txt
+            "segmentationfile.del_genes.conf_75.txt":
+                diff: expected/segmentationfile.del_genes.conf_75.txt
+            "segmentationfile.focal_data_by_genes.txt":
+                diff: expected/segmentationfile.focal_data_by_genes.txt
+            "segmentationfile.regions_track.conf_75.bed":
+                diff: expected/segmentationfile.regions_track.conf_75.bed
+            "segmentationfile.sample_cutoffs.txt":
+                diff: expected/segmentationfile.sample_cutoffs.txt
+            "segmentationfile.sample_seg_counts.txt":
+                diff: expected/segmentationfile.sample_seg_counts.txt
+            "segmentationfile.scores.gistic":
+                diff: expected/segmentationfile.scores.gistic
+            "stdout.txt":
+                diff: expected/stdout.txt
