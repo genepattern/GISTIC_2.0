@@ -1,4 +1,4 @@
-#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.13
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.14
 
 name: gistic example
 description: GISTIC_2.0 with examplefiles from the 2.0.23 release
@@ -10,49 +10,50 @@ params:
     maxspace:        "10000"
     array.list.file: "../../../doc/examplefiles/arraylistfile.txt"
     cnv.file:        "../../../doc/examplefiles/cnvfile.txt"
-    gene.gistic.yes: 1
-    amplifications.threshold: 0.1
-    deletions.threshold: 0.1
-    join.segment.size:   4
-    q-value.threshold:   0.25
-    remove.X:    1
-    cap.val: 1.5
-    confidence.level:    0.90
-    run.broad.analysis:  0
-    focal.length.cutoff: 0.50
-    max.sample.segs: 2500
-    arm.peel:    0
-    sample.center:   median
-    gene.collapse.method:    extreme
-    output.prefix:   "<seg.file_basename>_GISTIC_2.0_example"
+    gene.gistic: "1"
+    amplifications.threshold: "0.1"
+    deletions.threshold: "0.1"
+    join.segment.size:   "4"
+    q-value.threshold:   "0.25"
+    remove.X:    "1"
+    cap.val: "1.5"
+    confidence.level:    "0.90"
+    run.broad.analysis:  "0"
+    focal.length.cutoff: "0.50"
+    max.sample.segs: "2500"
+    arm.peel:    "0"
+    sample.center:   "median"
+    gene.collapse.method:    "extreme"
+    output.prefix:   "gpunit_example"
+
 assertions:
     jobStatus: success
     # outputDir: expected
     files:
         stdout.txt:
-            # custom diff, strip logging lines from stdout.txt
-            #   sed -e '/--- DONE setting up environment variables ---/d'
-            diffCmd: [ "./diff-skip-lines.sh", "/--- DONE setting up environment variables ---/d"]
             diff: ./expected/stdout.txt
-        segmentationfile_GISTIC_2.0_example.all_data_by_genes.txt:
-            diff: expected/segmentationfile.all_data_by_genes.txt
-        segmentationfile_GISTIC_2.0_example.all_lesions.conf_90.txt:
-            diff: expected/segmentationfile.all_lesions.conf_90.txt
-        segmentationfile_GISTIC_2.0_example.all_thresholded.by_genes.txt:
-            diff: expected/segmentationfile.all_thresholded.by_genes.txt
-        segmentationfile_GISTIC_2.0_example.amp_genes.conf_90.txt:
-            diff: expected/segmentationfile.amp_genes.conf_90.txt
-        segmentationfile_GISTIC_2.0_example.arraylistfile.txt:
-            diff: expected/segmentationfile.arraylistfile.txt
-        segmentationfile_GISTIC_2.0_example.broad_data_by_genes.txt:
-            diff: expected/segmentationfile.broad_data_by_genes.txt
-        segmentationfile_GISTIC_2.0_example.del_genes.conf_90.txt:
-            diff: expected/segmentationfile.del_genes.conf_90.txt
-        segmentationfile_GISTIC_2.0_example.focal_data_by_genes.txt:
-            diff: expected/segmentationfile.focal_data_by_genes.txt
-        segmentationfile_GISTIC_2.0_example.sample_cutoffs.txt:
-            diff: expected/segmentationfile.sample_cutoffs.txt
-        segmentationfile_GISTIC_2.0_example.sample_seg_counts.txt:
-            diff: expected/segmentationfile.sample_seg_counts.txt
-        segmentationfile_GISTIC_2.0_example.scores.gistic:
-            diff: expected/segmentationfile.scores.gistic
+        gpunit_example.all_data_by_genes.txt:
+            diff: expected/example.all_data_by_genes.txt
+        gpunit_example.all_lesions.conf_90.txt:
+            diff: expected/example.all_lesions.conf_90.txt
+        gpunit_example.all_thresholded.by_genes.txt:
+            diff: expected/example.all_thresholded.by_genes.txt
+        gpunit_example.amp_genes.conf_90.txt:
+            diff: expected/example.amp_genes.conf_90.txt
+        gpunit_example.arraylistfile.txt:
+            diff: expected/example.arraylistfile.txt
+        gpunit_example.broad_data_by_genes.txt:
+            diff: expected/example.broad_data_by_genes.txt
+        gpunit_example.del_genes.conf_90.txt:
+            diff: expected/example.del_genes.conf_90.txt
+        gpunit_example.focal_data_by_genes.txt:
+            diff: expected/example.focal_data_by_genes.txt
+        gpunit_example.regions_track.conf_90.bed:
+            diff: expected/example.regions_track.conf_90.bed
+        gpunit_example.sample_cutoffs.txt:
+            diff: expected/example.sample_cutoffs.txt
+        gpunit_example.sample_seg_counts.txt:
+            diff: expected/example.sample_seg_counts.txt
+        gpunit_example.scores.gistic:
+            diff: expected/example.scores.gistic
+
