@@ -1,0 +1,87 @@
+#
+# test case based on the run_gistic_example included in the 2.0.23 release of GISTIC
+# with input files copied from the examplefiles and refgenefiles directories.
+#
+# The example_results were generated with this docker command line:
+#   docker run -v `pwd`:`pwd` genepattern/docker-gistic:0.13
+#     gp_gistic2_from_seg -b `pwd`/example_results 
+#       -seg `pwd`/examplefiles/segmentationfile.txt 
+#       -mk `pwd`/examplefiles/markersfile.txt 
+#       -refgene `pwd`/refgenefiles/hg16.mat 
+#       -alf `pwd`/examplefiles/arraylistfile.txt 
+#       -cnv `pwd`/examplefiles/cnvfile.txt 
+#       -genegistic 1 
+#       -smallmem 1 
+#       -broad 1 
+#       -brlen 0.5 
+#       -conf 0.90 
+#       -armpeel 1 
+#       -savegene 1 
+#       -gcm extreme 
+#   >> stdout.txt
+
+#lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15
+
+name: GISTIC_2.0_example
+description: GISTIC_2.0 with examplefiles from the 2.0.23 release
+module: GISTIC_2.0
+params:
+    seg.file:        "examplefiles/segmentationfile.txt"
+    markers.file:    "examplefiles/markersfile.txt"
+    #refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    refgene.file:    "refgenefiles/hg16.mat"
+    array.list.file: "examplefiles/arraylistfile.txt"
+    cnv.file:        "examplefiles/cnvfile.txt"
+    gene.gistic:          "1"
+    run.broad.analysis:   "1"
+    # -brlen 0.5
+    focal.length.cutoff:  "0.5"
+    # -conf 0.90
+    confidence.level:     "0.90"
+    # -armpeel 1
+    arm.peel:             "1"
+    # -gcm extreme
+    gene.collapse.method: "extreme"
+
+    #
+    # extra params required for v6.14
+    #
+    join.segment.size: "8"
+    output.prefix: "run_gistic_example"
+
+assertions:
+    jobStatus: success
+    # custom diff to '--strip-trailing-cr'
+    diffCmd: [ "diff", "--strip-trailing-cr" ]
+    files:
+        stdout.txt:
+            diff: ./example_results/stdout.txt
+        run_gistic_example.all_data_by_genes.txt:
+            diff: example_results/run_gistic_example.all_data_by_genes.txt
+        run_gistic_example.all_lesions.conf_90.txt:
+            diff: example_results/run_gistic_example.all_lesions.conf_90.txt
+        run_gistic_example.all_thresholded.by_genes.txt:
+            diff: example_results/run_gistic_example.all_thresholded.by_genes.txt
+        run_gistic_example.amp_genes.conf_90.txt:
+            diff: example_results/run_gistic_example.amp_genes.conf_90.txt
+        run_gistic_example.arraylistfile.txt:
+            diff: example_results/run_gistic_example.arraylistfile.txt
+        run_gistic_example.broad_data_by_genes.txt:
+            diff: example_results/run_gistic_example.broad_data_by_genes.txt
+        run_gistic_example.broad_significance_results.txt:
+            diff: example_results/run_gistic_example.broad_significance_results.txt
+        run_gistic_example.broad_values_by_arm.txt:
+            diff: example_results/run_gistic_example.broad_values_by_arm.txt
+        run_gistic_example.del_genes.conf_90.txt:
+            diff: example_results/run_gistic_example.del_genes.conf_90.txt
+        run_gistic_example.focal_data_by_genes.txt:
+            diff: example_results/run_gistic_example.focal_data_by_genes.txt
+        run_gistic_example.regions_track.conf_90.bed:
+            diff: example_results/run_gistic_example.regions_track.conf_90.bed
+        run_gistic_example.sample_cutoffs.txt:
+            diff: example_results/run_gistic_example.sample_cutoffs.txt
+        run_gistic_example.sample_seg_counts.txt:
+            diff: example_results/run_gistic_example.sample_seg_counts.txt
+        # ignore 'scores.gistic', it's not an exact match between v6.14 (broad dotkit) and v6.15 (docker container)
+        #run_gistic_example.scores.gistic:
+        #    diff: example_results/run_gistic_example.scores.gistic
