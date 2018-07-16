@@ -76,6 +76,8 @@ assertions:
             diff: example_results/run_gistic_example.del_genes.conf_90.txt
         run_gistic_example.focal_data_by_genes.txt:
             diff: example_results/run_gistic_example.focal_data_by_genes.txt
+        run_gistic_example.regions_track.conf_90.bed:
+            diff: example_results/run_gistic_example.regions_track.conf_90.bed
         run_gistic_example.sample_cutoffs.txt:
             diff: example_results/run_gistic_example.sample_cutoffs.txt
         run_gistic_example.sample_seg_counts.txt:
