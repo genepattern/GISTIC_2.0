@@ -43,6 +43,12 @@ params:
     # -gcm extreme
     gene.collapse.method: "extreme"
 
+    #
+    # extra params required for v6.14
+    #
+    join.segment.size: "8"
+    output.prefix: "run_gistic_example"
+
 assertions:
     jobStatus: success
     # custom diff to '--strip-trailing-cr'
@@ -50,29 +56,29 @@ assertions:
     files:
         stdout.txt:
             diff: ./example_results/stdout.txt
-        all_data_by_genes.txt:
-            diff: example_results/all_data_by_genes.txt
-        all_lesions.conf_90.txt:
-            diff: example_results/all_lesions.conf_90.txt
-        all_thresholded.by_genes.txt:
-            diff: example_results/all_thresholded.by_genes.txt
-        amp_genes.conf_90.txt:
-            diff: example_results/amp_genes.conf_90.txt
-        arraylistfile.txt:
-            diff: example_results/arraylistfile.txt
-        broad_data_by_genes.txt:
-            diff: example_results/broad_data_by_genes.txt
-        broad_significance_results.txt:
-            diff: example_results/broad_significance_results.txt
-        broad_values_by_arm.txt:
-            diff: example_results/broad_values_by_arm.txt
-        del_genes.conf_90.txt:
-            diff: example_results/del_genes.conf_90.txt
-        focal_data_by_genes.txt:
-            diff: example_results/focal_data_by_genes.txt
-        sample_cutoffs.txt:
-            diff: example_results/sample_cutoffs.txt
-        sample_seg_counts.txt:
-            diff: example_results/sample_seg_counts.txt
-        scores.gistic:
-            diff: example_results/scores.gistic
+        run_gistic_example.all_data_by_genes.txt:
+            diff: example_results/run_gistic_example.all_data_by_genes.txt
+        run_gistic_example.all_lesions.conf_90.txt:
+            diff: example_results/run_gistic_example.all_lesions.conf_90.txt
+        run_gistic_example.all_thresholded.by_genes.txt:
+            diff: example_results/run_gistic_example.all_thresholded.by_genes.txt
+        run_gistic_example.amp_genes.conf_90.txt:
+            diff: example_results/run_gistic_example.amp_genes.conf_90.txt
+        run_gistic_example.arraylistfile.txt:
+            diff: example_results/run_gistic_example.arraylistfile.txt
+        run_gistic_example.broad_data_by_genes.txt:
+            diff: example_results/run_gistic_example.broad_data_by_genes.txt
+        run_gistic_example.broad_significance_results.txt:
+            diff: example_results/run_gistic_example.broad_significance_results.txt
+        run_gistic_example.broad_values_by_arm.txt:
+            diff: example_results/run_gistic_example.broad_values_by_arm.txt
+        run_gistic_example.del_genes.conf_90.txt:
+            diff: example_results/run_gistic_example.del_genes.conf_90.txt
+        run_gistic_example.focal_data_by_genes.txt:
+            diff: example_results/run_gistic_example.focal_data_by_genes.txt
+        run_gistic_example.sample_cutoffs.txt:
+            diff: example_results/run_gistic_example.sample_cutoffs.txt
+        run_gistic_example.sample_seg_counts.txt:
+            diff: example_results/run_gistic_example.sample_seg_counts.txt
+        run_gistic_example.scores.gistic:
+            diff: example_results/run_gistic_example.scores.gistic
