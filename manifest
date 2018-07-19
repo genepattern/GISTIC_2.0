@@ -91,7 +91,7 @@ p3_value=
 
 p4_MODE=
 p4_TYPE=TEXT
-p4_default_value=
+p4_default_value=10000
 p4_description=Set maxspace to generate pseudo-markers instead of creating a markers file. The param defines the maximum allowed spacing between pseudo-markers, in bases. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number. When 'markers file' is set 'maxspace' is ignored. When neither are set, generate pseudo-markers, with maxspace=10,000.
 p4_fileFormat=
 p4_flag=-maxspace 
@@ -381,4 +381,11 @@ userid=GenePattern
 #version=updated command line args to match the 2.0.23 example
 #version=add '-genepattern 1' back to the command line
 #version=added the rest of the v6.14 hard-coded args back to the command line
-version=reorderded command line args to match v6.14
+#version=reorderded command line args to match v6.14
+#version=updated LD_LIBRARY_PATH in docker image (interim)
+#version=testing in centos6, gistic_2.0.23_centos6:0.13.2 (interim)
+#version=testing with 'centos_v6.9-mcr_v83:0.3' image (interim)
+#version=set '-maxspace 10000' default, to match v6.14
+#version=set docker image to 'gistic_2.0.23-centos_6.9 (latest)' for local testing
+#version=set job.docker.image back to 'genepattern/docker-gistic:0.13'
+version=set '-maxspace 10000' default, to match v6.14
