@@ -28,6 +28,7 @@ params:
 
 assertions:
     jobStatus: success
+    diffCmd: [ "diff", "--strip-trailing-cr" ]
     files:
         stdout.txt:
             diff: ./expected/stdout.txt
