@@ -22,7 +22,7 @@
 
 #lsid=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15
 
-name: GISTIC_2.0_example
+name: GISTIC_2.0_example v6.14
 description: GISTIC_2.0 with examplefiles from the 2.0.23 release
 module: GISTIC_2.0
 params:
