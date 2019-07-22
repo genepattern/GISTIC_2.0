@@ -388,4 +388,5 @@ userid=GenePattern
 #version=set '-maxspace 10000' default, to match v6.14
 #version=set docker image to 'gistic_2.0.23-centos_6.9 (latest)' for local testing
 #version=set job.docker.image back to 'genepattern/docker-gistic:0.13'
-version=set '-maxspace 10000' default, to match v6.14
+#version=set '-maxspace 10000' default, to match v6.14
+version=testing module repository on AWS
