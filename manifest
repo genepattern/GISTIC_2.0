@@ -1,6 +1,6 @@
-#Wed, 19 Apr 2017 01:07:58 -0400
+#Thu, 09 Feb 2023 01:07:58 -0400
 JVMLevel=
-LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:6.11
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:6.12
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
 commandLine=<run-with-env> -u matlab-mcr/2014a <libdir>gp_gistic2_from_seg -b . -seg <seg.file> <markers.file> <maxspace> -alf <array.list.file> -cnv <cnv.file> -refgene <refgene.file> -ta <amplifications.threshold> -td <deletions.threshold> -js <join.segment.size> -qvt <q-value.threshold> -rx <remove.X> -cap <cap.val> -conf <confidence.level> -genegistic <gene.gistic> -broad <run.broad.analysis> -brlen <focal.length.cutoff> -maxseg <max.sample.segs> -armpeel <arm.peel> -scent <sample.center> -gcm <gene.collapse.method> -arb 1 -peak_type robust -fname <output.prefix> -genepattern 1 -twosides 0 -saveseg 0 -savedata 0 -smalldisk 0 -smallmem 1 -savegene 1 -v 0 <logdat>
 cpuType=any
@@ -12,7 +12,7 @@ os=linux
 
 p1_MODE=IN
 p1_TYPE=FILE
-p1_choiceDir=ftp\://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene
+p1_choiceDir=https://datasets.genepattern.org/gpftp/module_support_files/GISTIC/index_directory.json
 p1_choiceDirFilter=*.mat
 p1_choiceAllowCustom=false
 p1_default_value=
@@ -304,11 +304,11 @@ p22_value=
 
 pipelineModel=
 privacy=public
-quality=preproduction
+quality=production
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-version=Updated to GISTIC v2.0.23, added '-maxspace' and '-logdat' params, no longer requires a markers file
+version=Moved data from gpftp to datasets

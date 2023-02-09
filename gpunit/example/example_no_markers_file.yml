@@ -3,7 +3,7 @@ name: GISTIC_2.0_example_no_markers_file
 description: GISTIC_2.0 with examplefiles from the 6.0.23 release, without a markers file
 module: GISTIC_2.0
 params:
-    refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    refgene.file:    "https://datasets.genepattern.org/gpftp/module_support_files/GISTIC/refgene/Human_Hg16.mat"
     seg.file:        "../../doc/examplefiles/segmentationfile.txt"
     markers.file:    ""
     maxspace:        "10000"
