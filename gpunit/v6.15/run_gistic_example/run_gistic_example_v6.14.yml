@@ -28,7 +28,7 @@ module: GISTIC_2.0
 params:
     seg.file:        "examplefiles/segmentationfile.txt"
     markers.file:    "examplefiles/markersfile.txt"
-    #refgene.file:    "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+    #refgene.file:    "https://datasets.genepattern.org/gpftp/module_support_files/GISTIC/refgene/Human_Hg16.mat"
     refgene.file:    "refgenefiles/hg16.mat"
     array.list.file: "examplefiles/arraylistfile.txt"
     cnv.file:        "examplefiles/cnvfile.txt"

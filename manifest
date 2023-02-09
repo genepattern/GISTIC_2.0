@@ -1,6 +1,6 @@
-#Wed, 19 Apr 2017 01:07:58 -0400
+#Thu, 09 Feb 2023 01:07:58 -0400
 JVMLevel=
-LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.8
+LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00125:6.15.9
 author=Jen Dobson, Rameen Beroukhim, Gad Getz
 
 job.docker.image=genepattern/docker-gistic:0.13
@@ -49,7 +49,7 @@ name=GISTIC_2.0
 
 p1_MODE=IN
 p1_TYPE=FILE
-p1_choiceDir=ftp\://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene
+p1_choiceDir=https://datasets.genepattern.org/gpftp/module_support_files/GISTIC/index_directory.json
 p1_choiceDirFilter=*.mat
 p1_choiceAllowCustom=false
 p1_default_value=
@@ -350,43 +350,11 @@ p22_value=
 
 pipelineModel=
 privacy=public
-quality=preproduction
+quality=production
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
 taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
-#version=Containerized GISTIC v2.0.23 in 'genepattern/docker-gistic:0.13'
-#version=set job.docker.image to 'genepattern/docker-gistic:0.13'
-#version=make 'output.prefix' an optional parameter
-#version=refactor, commandLine format in manifest file
-#version=removed '-genepattern 1' command line arg
-#version=removed '-twosides 0' command line arg
-#version=removed '-saveseg 0' command line arg
-#version=removed '-savedata 0' command line arg
-#version=removed default value for maxspace parameter
-#version=set prefix_when_specified for 'amplifications.threshold', removed default value
-#version=set prefix_when_specified for 'deletions.threshold', removed default value
-#version=set prefix_when_specified for 'join.segment.size', removed default value
-#version=set prefix_when_specified for 'q-value.threshold', removed default value
-#version=set prefix_when_specified for 'remove.X', removed default value
-#version=set prefix_when_specified for 'max.sample.segs', removed default value
-#version=set prefix_when_specified for 'sample.center', removed default value
-#version=removed '-arb 1' command line arg
-#version=removed '-peak_type robust' command line arg
-#version=removed '-smalldisk 0' command line arg
-#version=removed '-v 0' command line arg
-#version=set prefix_when_specified for 'cap.val', removed default value
-#version=updated command line args to match the 2.0.23 example
-#version=add '-genepattern 1' back to the command line
-#version=added the rest of the v6.14 hard-coded args back to the command line
-#version=reorderded command line args to match v6.14
-#version=updated LD_LIBRARY_PATH in docker image (interim)
-#version=testing in centos6, gistic_2.0.23_centos6:0.13.2 (interim)
-#version=testing with 'centos_v6.9-mcr_v83:0.3' image (interim)
-#version=set '-maxspace 10000' default, to match v6.14
-#version=set docker image to 'gistic_2.0.23-centos_6.9 (latest)' for local testing
-#version=set job.docker.image back to 'genepattern/docker-gistic:0.13'
-#version=set '-maxspace 10000' default, to match v6.14
-version=testing module repository on AWS
+version=Moved data from gpftp to datasets

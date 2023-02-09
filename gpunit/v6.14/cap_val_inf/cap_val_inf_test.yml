@@ -4,7 +4,7 @@ name: gistic cap val inf
 description: Test of cap val set to Inf
 module: GISTIC_2.0
 params:
-       refgene.file: "ftp://gpftp.broadinstitute.org/module_support_files/GISTIC/refgene/Human_Hg16.mat"
+       refgene.file: "https://datasets.genepattern.org/gpftp/module_support_files/GISTIC/refgene/Human_Hg16.mat"
        seg.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/segmentationfile.txt"
        markers.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/markersfile.txt"
        array.list.file: "ftp://ftp.broadinstitute.org/pub/GISTIC2.0/examplefiles/arraylistfile.txt"
