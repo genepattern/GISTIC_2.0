@@ -1,3 +1,4 @@
+#Fri, 10 Feb 2023 12:21:14 -0800
 ##Thu, 09 Feb 2023 01:07:58 -0400
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00125\:7
@@ -55,7 +56,7 @@ p3_value=
 p4_MODE=
 p4_TYPE=TEXT
 p4_default_value=10000
-p4_description=Set maxspace to generate pseudo-markers instead of creating a markers file. The param defines the maximum allowed spacing between pseudo-markers, in bases. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number. When 'markers file' is set 'maxspace' is ignored. When neither are set, generate pseudo-markers, with maxspace=10,000.
+p4_description=Set maxspace to generate pseudo-markers instead of creating a markers file. The param defines the maximum allowed spacing between pseudo-markers, in bases. Segments that contain fewer than this number of markers are joined to the neighboring segment that is closest in copy number. When 'markers file' is set 'maxspace' is ignored. When neither are set, generate pseudo-markers, with maxspace\=10,000.
 p4_fileFormat=
 p4_flag=-maxspace 
 p4_name=maxspace
@@ -290,9 +291,9 @@ p21_value=
 p22_MODE=
 p22_TYPE=TEXT
 # <actual>=<display>
-p22_choices=\=autodetect;0=linear;1=log2
+p22_choices=\=autodetect;0\=linear;1\=log2
 p22_default_value=
-p22_description=The '-logdat' param to apply log2 ratio for SNP arrays, default=autodetect
+p22_description=The '-logdat' param to apply log2 ratio for SNP arrays, default\=autodetect
 p22_fileFormat=
 p22_flag=
 p22_name=logdat
@@ -304,7 +305,7 @@ p22_value=
 
 pipelineModel=
 privacy=public
-quality=production
+quality=${quality.level}
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=
@@ -312,3 +313,5 @@ taskDoc=doc.html
 taskType=SNP Analysis
 userid=GenePattern
 version=Moved data from gpftp to datasets
+
+publicationDate=02/10/2023 12\:21 
